@@ -1,12 +1,39 @@
-# React + Vite
+## 📌 커밋 메시지 규칙
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 커밋 메시지 구조
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ✏️ 커밋 타입 (영어로 작성)
 
-## Expanding the ESLint configuration
+| 타입       | 설명                                       |
+| ---------- | ------------------------------------------ |
+| `feat`     | 새로운 기능 추가                           |
+| `fix`      | 버그 수정                                  |
+| `docs`     | 문서 수정 (README, 주석 등)                |
+| `refactor` | 코드 리팩토링 (기능 변경 없이 구조 개선)   |
+| `test`     | 테스트 코드 추가 및 수정                   |
+| `chore`    | 빌드 설정, 패키지 매니저 설정 등 기타 잡무 |
+| `perf`     | 성능 향상 관련 코드 변경                   |
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+### 💡 커밋 메시지 예시
+
+```
+feat: 회원가입 기능 구현
+fix: 로그인 시 잘못된 비밀번호 처리 오류 수정
+docs: README에 커밋 규칙 추가
+style: 코드 컨벤션에 맞춰 들여쓰기 수정
+refactor: 중복된 유틸 함수 제거
+test: 로그인 테스트 케이스 추가
+chore: ESLint 설정 파일 추가
+```
+
+### ✅ 기타 규칙
+
+- 제목은 **한 줄(50자 이하)**로 간결하게 작성
+- 첫 글자는 **소문자**, 문장 끝에 `.` 붙이지 않기
+- 필요 시 **본문**에 변경 이유나 상세 내용을 작성
+- 이슈와 연결할 경우 **꼬리말**에 작성  
+  예) `Closes #23`, `Related to #45`
