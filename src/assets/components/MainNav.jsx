@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './MainNav.module.scss';
 import { NavLink, useLocation } from 'react-router-dom';
 
-const MainNav = () => {
+const MainNav = ({ onShow }) => {
   const location = useLocation();
 
   const activateLink = ({ isActive }) =>
@@ -25,6 +25,8 @@ const MainNav = () => {
       <NavLink className={activateLink} to='https://www.kakaocorp.com/ir/main'>
         투자정보
       </NavLink>
+
+      <button onClick={onShow}>search</button>
     </nav>
   );
 };
