@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 import navData from './navData';
 import NavMenuItem from './NavMenuItem';
 
-const MainNav = () => {
-  const [openMenu, setOpenMenu] = useState(null); // 어떤 메뉴가 열렸는지 저장
-
+const MainNav = ({ openMenu, setOpenMenu }) => {
   const handleToggle = (id) => {
     setOpenMenu((prev) => (prev === id ? null : id));
   };

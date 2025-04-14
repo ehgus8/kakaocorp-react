@@ -164,6 +164,11 @@ const navData = [
       },
     ],
   },
+  {
+    title: '투자정보',
+    id: 'mainMenu-99',
+    link: 'https://www.kakaocorp.com/ir/main',
+  },
 ];
 
 export default navData;
