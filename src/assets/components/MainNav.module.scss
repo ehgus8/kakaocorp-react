@@ -13,6 +13,12 @@ nav {
       grid-column-gap: 52px;
       column-gap: 52px;
 
+      li:nth-child(3) {
+        .box_menu {
+          left: 51px;
+        }
+      }
+
       .item_menu {
         display: block;
         padding: 4px 16px 6px;
@@ -47,14 +53,10 @@ nav {
         background-color: #fff;
         visibility: hidden;
         opacity: 0;
-        transition:
-          visibility 0s linear 0.2s,
-          opacity 0.2s ease-in-out;
 
         &.box_menu.visible {
           visibility: visible;
           opacity: 1;
-          transition-delay: 0s;
         }
 
         div {
@@ -135,6 +137,12 @@ nav {
       &.list_gnb {
         grid-column-gap: 16px;
         column-gap: 16px;
+
+        li:nth-child(3) {
+          .box_menu {
+            left: 33px;
+          }
+        }
 
         .item_menu {
           padding: 4px 12px 5px;

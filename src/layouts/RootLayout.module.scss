@@ -31,6 +31,22 @@
       text-decoration: none;
     }
   }
+
+  header.open_gnb {
+    border-bottom: 1px solid #eee;
+    z-index: 5000;
+
+    &::before {
+      display: block;
+      position: fixed;
+      top: 92px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      content: '';
+    }
+  }
 }
 
 @media screen and (max-width: 1902px) {
@@ -44,11 +60,19 @@
 }
 
 @media screen and (max-width: 1439px) {
-  header {
-    &.doc-header {
-      .inner_header {
-        width: 954px;
-        height: 84px;
+  .layout {
+    header {
+      &.doc-header {
+        .inner_header {
+          width: 954px;
+          height: 84px;
+        }
+      }
+    }
+
+    header.open_gnb {
+      &::before {
+        top: 85px;
       }
     }
   }

@@ -9,6 +9,7 @@ import SearchPage from '../components/Search/SearchPage';
 
 const RootLayout = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [openMenu, setOpenMenu] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,7 +19,7 @@ const RootLayout = () => {
     window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll); // 클린업
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -33,14 +34,17 @@ const RootLayout = () => {
   const queryParams = new URLSearchParams(location.search);
   const searchQuery = queryParams.get('searchKeyword');
 
+  const excludedIds = ['mainMenu-99']; // 투자정보를 제외하기 위해서
+  const isOpenGnb = openMenu && !excludedIds.includes(openMenu);
+
   return (
     <div className={styles.layout}>
       {searchIsShown && <SearchModal onClose={hideSearchHandler} />}
       <header
-        className={`${styles['doc-header']} ${styles.pc_header} ${isScrolled ? styles.scroll : ''}`}
+        className={`${styles['doc-header']} ${isScrolled ? styles.scroll : ''} ${isOpenGnb ? styles.open_gnb : ''}`}
       >
         <div className={styles.inner_header}>
-          <MainNav />
+          <MainNav openMenu={openMenu} setOpenMenu={setOpenMenu} />
         </div>
       </header>
 
