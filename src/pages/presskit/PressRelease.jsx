@@ -33,7 +33,7 @@ import NewsList from './NewsList';
 
 const dummyArticleList = [
   {
-    id: 1,
+    id: 11517,
     title:
       '“하루 1만 명 오가던 골목상권에서 5천 명의 온라인 단골 만들다” 카카오-북촌 계동길 상인회장, 파리 OECD 회의에서 ‘프로젝트 단골’ 성과 발표',
     tags: ['#프로젝트단골', '#oecd', '#상생사례', '#디지털전환', '#소상공인'],
@@ -157,7 +157,7 @@ const dummyArticleList = [
 ];
 
 const cardList = [
-  <Card item={dummyArticleList[0]} imgPosition='bottom' />,
+  <Card item={dummyArticleList[0]} imgPosition='top' />,
   <Card item={dummyArticleList[1]} imgPosition='top' />,
   <Card item={dummyArticleList[2]} imgPosition='top' />,
   <Card item={dummyArticleList[3]} imgPosition='top' />,

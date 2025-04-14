@@ -1,40 +1,26 @@
 import React, { useEffect, useRef, useState } from 'react';
+import PressSlick from './PressSlick';
 
-const Carousel = ({ items, visibleCount = 3 }) => {
-  const [currentIndex, setCurrentIndex] = useState(visibleCount);
-  const itemRef = useRef(null);
-  const clonedItems = [
-    ...items.slice(-visibleCount),
-    ...items,
-    ...items.slice(0, visibleCount),
-  ];
+const Carousel = ({ items }) => {
+  const sliderRef = useRef(null);
 
   const handleNext = () => {
-    setCurrentIndex((prev) => prev + 1);
+    sliderRef.current.slickNext();
   };
   const handlePrev = () => {
-    setCurrentIndex((prev) => prev - 1);
+    sliderRef.current.slickPrev();
   };
-
-  const trackStyle = {
-    transform: `translateX(-${40 * currentIndex}%)`,
+  const settings = {
+    infinite: true,
+    centerMode: true,
+    centerPadding: '30px',
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
   };
-
-  //   const trackStyle = {
-  //     transform: `translateX(-${100 + 30 * currentIndex}%)`,
-  //     //   transition: 'transform 0.3s ease-in-out',
-  //     //   display: 'flex',
-  //   };
-
   return (
     <div className='carousel-container'>
-      <div className='carousel-track' style={trackStyle}>
-        {clonedItems.map((item, index) => (
-          <div className='carousel-item' key={index}>
-            {item}
-          </div>
-        ))}
-      </div>
+      <PressSlick settings={settings} refElement={sliderRef} items={items} />
       <button className='carousel-button left' onClick={handlePrev}>
         &#10094;
       </button>

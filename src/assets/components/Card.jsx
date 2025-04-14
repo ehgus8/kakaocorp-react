@@ -1,20 +1,27 @@
 import React from 'react';
 import styles from './Card.module.scss';
+import { Link } from 'react-router-dom';
 
 export const MiniCard = ({ articleItem }) => {
   return (
-    <div className={styles.minicardContainer}>
-      <div className={styles.textContainer}>
-        <div className={styles.header}>
-          <img src='../../dummy/loudspeaker.webp' width='32px' />
-          <span>보도자료</span>
-          <span>{articleItem.date}</span>
-        </div>
-        <div className='title'>
-          <strong>{articleItem.title}</strong>
+    <Link
+      to={`/detail/${articleItem.id}`}
+      className={styles.noLinkStyle}
+      draggable={false}
+    >
+      <div className={styles.minicardContainer}>
+        <div className={styles.textContainer}>
+          <div className={styles.header}>
+            <img src='../../dummy/loudspeaker.webp' width='24px' />
+            <span>보도자료</span>
+            <span>{articleItem.date}</span>
+          </div>
+          <div className='title'>
+            <strong>{articleItem.title}</strong>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
@@ -34,35 +41,41 @@ export const MiniCard = ({ articleItem }) => {
 
 const Card = ({ item, imgPosition = 'top' }) => {
   return (
-    <div className={styles.cardContainer}>
-      {/* 이미지가 위에 있는 경우 top */}
-      {imgPosition === 'top' && (
-        <div className={styles.imageContainer}>
-          <img src={item.imgSrc} />
+    <Link
+      to={`/detail/${item.id}`}
+      className={styles.noLinkStyle}
+      draggable={false}
+    >
+      <div className={styles.cardContainer}>
+        {/* 이미지가 위에 있는 경우 top */}
+        {imgPosition === 'top' && (
+          <div className={styles.imageContainer}>
+            <img src={item.imgSrc} />
+          </div>
+        )}
+        <div className={styles.textContainer}>
+          <div className={styles.header}>
+            <img src={item.iconSrc} width='32px' />
+            <span className={styles.category}>{item.category}</span>
+            <span>{item.date}</span>
+          </div>
+          <div className={styles.title}>
+            <strong>{item.title}</strong>
+          </div>
+          <div className={styles.tags}>
+            {item.tags.map((tag) => (
+              <span>{tag} </span>
+            ))}
+          </div>
         </div>
-      )}
-      <div className={styles.textContainer}>
-        <div className={styles.header}>
-          <img src={item.iconSrc} width='32px' />
-          <span className={styles.category}>{item.category}</span>
-          <span>{item.date}</span>
-        </div>
-        <div className={styles.title}>
-          <strong>{item.title}</strong>
-        </div>
-        <div className={styles.tags}>
-          {item.tags.map((tag) => (
-            <span>{tag} </span>
-          ))}
-        </div>
+        {/* 이미지가 아래에 있는 경우 bottom */}
+        {imgPosition === 'bottom' && (
+          <div className={styles.imageContainer}>
+            <img src={item.imgSrc} />
+          </div>
+        )}
       </div>
-      {/* 이미지가 아래에 있는 경우 bottom */}
-      {imgPosition === 'bottom' && (
-        <div className={styles.imageContainer}>
-          <img src={item.imgSrc} />
-        </div>
-      )}
-    </div>
+    </Link>
   );
 };
 
