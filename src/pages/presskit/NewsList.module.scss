@@ -1,0 +1,57 @@
+.mainContainer {
+  width: 100vw;
+  max-width: 1200px;
+  display: flex;
+  justify-content: left;
+  .listContainer {
+    flex: 2;
+    // width: 500px;
+
+    .newsListSection {
+      margin-top: 32px;
+      padding-bottom: 24px;
+      border-bottom: 2px solid #f3f3f3;
+      .listContent {
+        display: flex;
+      }
+      .textSection {
+        flex: 2;
+      }
+      .imageSection {
+        overflow: hidden;
+        border-radius: 15px;
+
+        img {
+          width: 136px;
+          height: 76px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .recommendationSection {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    flex: 1;
+    .btn {
+      display: inline-block;
+      background-color: blue;
+      width: 10px;
+      height: 10px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .circleBtn {
+      border-radius: 10px;
+    }
+    .barBtn {
+      width: 25px;
+      height: 10px;
+      border-radius: 5px;
+    }
+  }
+}
