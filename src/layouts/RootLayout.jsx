@@ -6,6 +6,7 @@ import MainNav from '../assets/components/MainNav';
 
 import SearchModal from '../components/Modal/SearchModal';
 import SearchPage from '../components/Search/SearchPage';
+import footerData from '../assets/components/footerData';
 
 const RootLayout = () => {
   const [isScrolled, setIsScrolled] = useState(false);
