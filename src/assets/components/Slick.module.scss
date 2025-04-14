@@ -1,0 +1,30 @@
+.customSlick {
+  border: 1px solid red;
+
+  .slick-slide {
+    padding: 0;
+    margin: 0;
+  }
+
+  .slick-list {
+    padding: 0;
+    margin: 0;
+  }
+
+  .slick-dots {
+    border: 1px solid red;
+
+    li button:before {
+      font-size: 10px;
+      color: gray;
+    }
+
+    li.slick-active button:before {
+      color: #ff6600;
+    }
+  }
+
+  .slick-arrow {
+    display: none; // 화살표 숨기기
+  }
+}

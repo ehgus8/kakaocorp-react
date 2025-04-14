@@ -1,33 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './MainNav.module.scss';
-import { NavLink, useLocation, Link } from 'react-router-dom';
-import Slick from './Slick';
-import SlideCard from './SlideCard';
+import { Link } from 'react-router-dom';
+import navData from './navData';
+import NavMenuItem from './NavMenuItem';
 
 const MainNav = () => {
-  const slideData = [
-    {
-      bigImg: 'https://placehold.co/600x400/FFCCCC',
-      smallImg: 'https://placehold.co/100x100/FF6666',
-      title: '첫 번째 슬라이드',
-      description: '이건 예시 설명 텍스트입니다.',
-    },
-    {
-      bigImg: 'https://placehold.co/600x400/CCFFCC',
-      smallImg: 'https://placehold.co/100x100/66FF66',
-      title: '두 번째 슬라이드',
-      description: '작은 이미지와 텍스트 포함!',
-    },
-  ];
+  const [openMenu, setOpenMenu] = useState(null); // 어떤 메뉴가 열렸는지 저장
 
-  const slideItems = slideData.map((data, idx) => (
-    <SlideCard key={idx} {...data} />
-  ));
-
-  const location = useLocation();
-
-  const activateLink = ({ isActive }) =>
-    `${styles.navLink} ${isActive && location.pathname !== '/' ? styles.active : ''}`;
+  const handleToggle = (id) => {
+    setOpenMenu((prev) => (prev === id ? null : id));
+  };
 
   return (
     <>
@@ -88,43 +70,14 @@ const MainNav = () => {
       </h1>
       <nav id='gnbContentPC' className={styles['doc-gnb']}>
         <ul className={styles.list_gnb}>
-          <li>
-            <button type='button' className={styles.item_menu}>
-              소개
-            </button>
-            <div id='mainMenu-0' className={styles.box_menu}>
-              <ul className={styles.list_second}>
-                <li>
-                  <Link to={'#'} className={styles.link_submenu}>
-                    카카오 문화
-                  </Link>
-                </li>
-                <li>
-                  <Link to={'#'} className={styles.link_submenu}>
-                    카카오 그룹
-                  </Link>
-                </li>
-                <li>
-                  <Link to={'#'} className={styles.link_submenu}>
-                    연혁
-                  </Link>
-                </li>
-              </ul>
-              <div className={styles.cont_menu}>
-                <div className={styles['slick-slider']}>
-                  <div className={styles.slick_list}>
-                    <Slick
-                      items={slideItems}
-                      infinite={false}
-                      slidesToShow={1}
-                      autoplay={false}
-                      arrows={false}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
+          {navData.map((menu, idx) => (
+            <NavMenuItem
+              key={idx}
+              menu={menu}
+              isOpen={openMenu === menu.id}
+              onToggle={() => handleToggle(menu.id)}
+            />
+          ))}
         </ul>
       </nav>
       <div className={styles.area_util}></div>

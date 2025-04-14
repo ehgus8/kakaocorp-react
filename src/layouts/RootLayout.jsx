@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Outlet, Link } from 'react-router-dom';
+
 import styles from './RootLayout.module.scss';
 import MainNav from '../assets/components/MainNav';
-
-import { Outlet, Link } from 'react-router-dom';
 
 const RootLayout = () => {
   const [isScrolled, setIsScrolled] = useState(false);
