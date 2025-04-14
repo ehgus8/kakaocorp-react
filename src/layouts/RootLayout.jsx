@@ -1,19 +1,11 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 import { Outlet, Link, useLocation } from 'react-router-dom';
-=======
-import { Link, Outlet } from 'react-router-dom';
->>>>>>> 89420a7d1a2ba2457b6213d818767dce2b7bde7a
 
 import styles from './RootLayout.module.scss';
 import MainNav from '../assets/components/MainNav';
 
-<<<<<<< HEAD
 import SearchModal from '../components/Modal/SearchModal';
 import SearchPage from '../components/Search/SearchPage';
-=======
-import footerData from '../assets/components/footerData';
->>>>>>> 89420a7d1a2ba2457b6213d818767dce2b7bde7a
 
 const RootLayout = () => {
   const [isScrolled, setIsScrolled] = useState(false);
