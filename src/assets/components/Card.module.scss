@@ -1,0 +1,90 @@
+.cardContainer {
+  width: 630px;
+  height: 679px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f3f3;
+  border-radius: 20px;
+  overflow: hidden;
+
+  .imageContainer {
+    width: inherit;
+    /* border-top-left-radius: 20px; */
+    /* border-top-right-radius: 20px; */
+    overflow: hidden;
+    flex: 1;
+
+    img {
+      width: inherit;
+      /* height: 300px; */
+      object-fit: cover;
+    }
+  }
+
+  .textContainer {
+    width: inherit;
+    flex: 1;
+    padding: 32px;
+    box-sizing: border-box;
+  }
+}
+
+.title strong {
+  display: inline-block;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 16px;
+}
+.tags {
+  font-size: 1em;
+  margin-top: 32px;
+}
+
+@media (max-width: 1440px) {
+  .cardContainer {
+    width: 464px;
+    height: 524px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cardContainer {
+    width: 340px;
+    height: 400px;
+  }
+  .title strong {
+    margin-top: 12px;
+  }
+  .tags {
+    font-size: 0.8em;
+  }
+}
+
+.minicardContainer {
+  text-align: initial;
+  width: 220px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f3f3;
+  border-radius: 20px;
+}
+
+@media (max-width: 1024px) {
+  .minicardContainer {
+    display: none;
+  }
+}
+
+.category {
+  text-align: center;
+  font-size: 0.8em;
+  display: inline-block;
+  width: 68px;
+  height: 30px;
+  background-color: white;
+  line-height: 30px;
+  padding: 3px 6px;
+  border-radius: 10px;
+  letter-spacing: -1px;
+}
