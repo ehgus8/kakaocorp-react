@@ -19,6 +19,11 @@ const SearchResultItem = ({ result, expanded, toggle }) => (
         )}
       </div>
       <p className={styles.resultDescription}>{result.description}</p>
+      <p className={styles.resultTagLine}>
+        {result.tag.length > 100
+          ? result.tag.slice(0, 100) + '...'
+          : result.tag}
+      </p>
     </div>
     <img src={result.imageUrl} className={styles.resultImage} />
   </div>

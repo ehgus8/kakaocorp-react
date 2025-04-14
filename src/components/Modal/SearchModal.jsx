@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styles from './SearchModal.module.scss';
 import { useNavigate } from 'react-router-dom';
+import SearchHeader from '../Search/SearchHeader';
+import SearchInput from '../Search/SearchInput';
 
 // 모달 창을 띄울 때 알림창에 포커스를 주도록 뒷배경을 어둡게 만드는 용도.
 const BackDrop = ({ onConfirm }) => {
@@ -9,7 +11,16 @@ const BackDrop = ({ onConfirm }) => {
 
 const SearchModal = ({ onClose }) => {
   const [searchValue, setSearchValue] = useState('');
-  const navigate = useNavigate(); // ✅ 네비게이터 생성
+  const [inputValue, setInputValue] = useState('');
+  const navigate = useNavigate(); // 네비게이터 생성
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      setSearchValue(inputValue);
+      navigate(`/?searchKeyword=${encodeURIComponent(inputValue)}`);
+    }
+  };
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -23,18 +34,32 @@ const SearchModal = ({ onClose }) => {
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
-        <button className={styles.closeButton} onClick={onClose}>
-          ×
-        </button>
-        <form onSubmit={submitHandler}>
-          <input
-            type='text'
-            placeholder='무엇이 궁금하신가요?'
-            value={searchValue}
-            onChange={(e) => setSearchValue(e.target.value)}
-            className={styles.searchInput}
-          />
-        </form>
+        <div className={styles.modalHeader}>
+          <SearchHeader onClose={onClose} />
+          <div className={styles.searchSection}>
+            <SearchInput
+              inputValue={inputValue}
+              setInputValue={setInputValue}
+              submitHandler={submitHandler}
+              onKeyDown={handleKeyDown}
+              onClose={onClose}
+            />
+
+            <div className={styles.tags}>
+              {[
+                '#상상사례',
+                '#만약약국',
+                '#민들레마음',
+                '#중증희귀난치질환 환아',
+                '#만우절 이벤트',
+              ].map((tag, idx) => (
+                <span key={idx} className={styles.tag}>
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

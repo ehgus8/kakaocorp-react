@@ -1,0 +1,66 @@
+.searchContainer {
+  position: fixed;
+  margin-top: 5rem; /* 헤더 아래 간격 조정 (필요에 따라 조정 가능) */
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  //   background: bisque;
+  //   min-height: 500px;
+  max-width: 500px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.chatBubble {
+  position: relative;
+  display: flex;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  align-items: center;
+  background: #333;
+  border-radius: 40px;
+  padding: 0.6rem 1.5rem;
+  color: white;
+  width: 300px;
+  max-width: 90%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  overflow: visible;
+}
+
+/* 말풍선 꼬리 */
+.chatBubble::after {
+  content: '';
+  position: absolute;
+  bottom: -5%;
+  right: 5%;
+  width: 16px;
+  height: 16px;
+  background: #333;
+  border-bottom-left-radius: 100%;
+  transform: rotate(45deg);
+  //z-index: 1; /* 꼬리를 말풍선 위에 보이게 */
+}
+
+.searchInput {
+  background: transparent;
+  width: 400px;
+  padding: 0.75rem 0.2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+  margin-left: 0.8rem;
+  outline: none;
+}
+
+.characterImage {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 100px;
+}

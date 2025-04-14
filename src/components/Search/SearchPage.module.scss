@@ -63,16 +63,25 @@
   color: #fff;
 }
 
+.resultText {
+  margin-left: 5%;
+  font-weight: bold;
+}
+
 .results {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
   margin-top: 2rem;
+  justify-content: space-between;
+  // background: greenyellow;
+  margin: 2rem 50px;
 }
 
 .resultItem {
   position: relative;
+  overflow: hidden;
   width: 270px;
   height: 330px;
   background: #efefef;
@@ -122,12 +131,21 @@
   // padding: 5rem auto;
 }
 
+.resultTagLine {
+  font-size: 1rem;
+  color: #666;
+  white-space: nowrap; /* 텍스트가 한 줄로 표시되게 */
+  overflow: hidden; /* 넘치는 텍스트 숨기기 */
+  text-overflow: ellipsis; /* 넘치는 텍스트에 ... 표시 */
+}
+
 .arrowWrapper {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between; /* 요소들 간 간격을 자동 분배 */
   gap: 0.5rem;
+  background: bisque;
 }
 
 .resultHeader {
