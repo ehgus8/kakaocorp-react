@@ -9,6 +9,7 @@ const Slick = ({
   slidesToShow = 1,
   autoplay = true,
   arrows = true,
+  fade = false,
 }) => {
   const settings = {
     dots: true,
@@ -19,10 +20,55 @@ const Slick = ({
     autoplay,
     autoplaySpeed: 3000,
     arrows,
+    fade,
   };
 
   return (
-    <div style={{ width: '90%', margin: '0 auto' }}>
+    <div style={{ width: '100%', margin: '0 auto' }}>
+      <style>{`
+        .slick-dots {
+          position:initial;
+          height:16px;
+          margin-top:16px;
+
+          li{
+            width:auto;
+            height:auto;
+            margin:0;
+
+            button{
+              padding:8px;
+              width:auto;
+              height:auto;
+
+              &::before{
+                width:8px;
+                height:8px;
+                content:'';
+                display:block;
+                background:#000;
+                border-radius:4px;
+                position:initial;
+              }
+            }
+
+            &.slick-active{
+              button{
+                &::before{
+                  width:24px;
+                }
+              }
+            }
+          }
+        }
+
+        @media (max-width: 1439px) {
+          .slick-dots {
+            margin-top:12px;
+          }
+        }
+      `}</style>
+
       <Slider {...settings}>
         {items.map((item, index) => (
           <div key={index}>
