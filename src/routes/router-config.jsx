@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import RootLayout from '../layouts/RootLayout';
 import Index from '../pages/main';
+import SearchPage from '../components/Search/SearchPage';
 
 // 라우터 설정
 export const router = createBrowserRouter([
@@ -14,6 +15,7 @@ export const router = createBrowserRouter([
         index: true,
         element: <Index />,
       },
+      { path: 'searchKeyword', element: <SearchPage /> },
     ],
   },
 ]);

@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link, useLocation } from 'react-router-dom';
 
 import styles from './RootLayout.module.scss';
 import MainNav from '../assets/components/MainNav';
+
+import SearchModal from '../components/Modal/SearchModal';
+import SearchPage from '../components/Search/SearchPage';
 
 const RootLayout = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,8 +22,20 @@ const RootLayout = () => {
     };
   }, []);
 
+  // 모달 공개 여부 상태 변수
+  const [searchIsShown, setSearchIsShown] = useState(false);
+
+  // 모달을 열고 닫아 주는 핸들러
+  const showSearchHandler = () => setSearchIsShown(true);
+  const hideSearchHandler = () => setSearchIsShown(false);
+
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const searchQuery = queryParams.get('searchKeyword');
+
   return (
     <div className={styles.layout}>
+      {searchIsShown && <SearchModal onClose={hideSearchHandler} />}
       <header
         className={`${styles['doc-header']} ${styles.pc_header} ${isScrolled ? styles.scroll : ''}`}
       >
@@ -31,7 +46,7 @@ const RootLayout = () => {
 
       <main className={styles.main}>
         {/* 바뀌는 부분(동적 컴포넌트)이 들어갈 자리 */}
-        <Outlet />
+        {searchQuery ? <SearchPage /> : <Outlet />}
       </main>
 
       <footer className={styles.footer}>
