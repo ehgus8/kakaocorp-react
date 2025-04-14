@@ -59,6 +59,8 @@
   border-radius: 8px;
   border: 1px solid #ccc;
   margin-bottom: 1rem;
+  background: #333;
+  color: #fff;
 }
 
 .results {
@@ -70,16 +72,16 @@
 }
 
 .resultItem {
-  width: 300px; /* 카드 너비 */
-  height: 350px; /* 카드 높이 */
-  background-color: #efefef;
+  position: relative;
+  width: 270px;
+  height: 330px;
+  background: #efefef;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem;
+  padding: 1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   transition: transform 0.2s ease;
 }
@@ -90,10 +92,12 @@
 }
 
 .resultImage {
-  width: 80px;
-  height: 80px;
+  width: 100%;
+  height: 50%;
   object-fit: cover;
   border-radius: 4px;
+  object-fit: cover;
+  display: block;
   margin-bottom: 0.5rem; /* 이미지와 텍스트 사이 간격 */
 }
 
@@ -113,6 +117,65 @@
 
 .resultDescription {
   font-size: 1.3em;
-  line-height: 1.6rem;
+  line-height: 1.8rem;
   font-weight: bold;
+  // padding: 5rem auto;
+}
+
+.arrowWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 요소들 간 간격을 자동 분배 */
+  gap: 0.5rem;
+}
+
+.resultHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 2;
+  text-align: right;
+}
+
+.iconGroup {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  // background: white;
+  //border: 1px solid #ccc;
+  // border-radius: 8px;
+  padding: 0.5rem;
+  z-index: 10;
+  animation: slideDown 0.4s ease-out;
+}
+
+.iconButton {
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-bottom: 0.3rem;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
