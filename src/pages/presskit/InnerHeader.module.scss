@@ -1,0 +1,59 @@
+.innerHeader {
+  background-color: white;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: fit-content;
+
+  padding: 20px;
+}
+
+.innerHeader.scrolled {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  transition-duration: 0.3s;
+  border-bottom: 1px solid lightgray;
+  background-color: #fff;
+  padding: 10px;
+
+  h3 {
+    display: inline-block;
+    transform: translate(10px, -10px);
+    font-weight: bold;
+    letter-spacing: -0.6px;
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .innerHeader {
+    h1 {
+      font-size: 3.5em;
+      font-weight: bold;
+      letter-spacing: -4px;
+    }
+
+    h2 {
+      font-size: 2em;
+      letter-spacing: -3px;
+      margin-top: 22px;
+    }
+  }
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: -4px;
+}
+
+h2 {
+  font-size: 1.5em;
+  letter-spacing: -3px;
+  margin-top: 10px;
+}
+
+.none {
+  display: none;
+}
