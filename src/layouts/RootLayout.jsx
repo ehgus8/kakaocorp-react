@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './RootLayout.module.scss';
 import MainNav from '../assets/components/MainNav';
-import Footer from '../assets/components/Footer';
-import { Outlet } from 'react-router-dom';
+
+import { Outlet, Link } from 'react-router-dom';
 
 const RootLayout = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll); // 클린업
+    };
+  }, []);
+
   return (
     <div className={styles.layout}>
-      <header className={styles.header}>
-        <div className={styles.container}>
+      <header
+        className={`${styles['doc-header']} ${styles.pc_header} ${isScrolled ? styles.scroll : ''}`}
+      >
+        <div className={styles.inner_header}>
           <MainNav />
         </div>
       </header>
@@ -20,7 +36,24 @@ const RootLayout = () => {
 
       <footer className={styles.footer}>
         <div className={styles.container}>
-          <Footer />
+          <section>
+            <h2>하단 메뉴</h2>
+            <div>
+              <h2>오늘의 카카오</h2>
+              <ul>
+                <li>
+                  <Link to={'#'}>카카오톡 공식 다운로드</Link>
+                </li>
+                <li>
+                  <Link to={'#'} target='_blank'>
+                    카카오톡백업
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section></section>
         </div>
       </footer>
     </div>
