@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 import styles from './RootLayout.module.scss';
 import MainNav from '../assets/components/MainNav';
+
+import footerData from '../assets/components/footerData';
 
 const RootLayout = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,21 +42,76 @@ const RootLayout = () => {
 
       <footer className={styles.footer}>
         <div className={styles.container}>
-          <section>
-            <h2>하단 메뉴</h2>
-            <div>
-              <h2>오늘의 카카오</h2>
-              <ul>
-                <li>
-                  <Link to={'#'}>카카오톡 공식 다운로드</Link>
-                </li>
-                <li>
-                  <Link to={'#'} target='_blank'>
-                    카카오톡백업
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          <section className={styles.container_inner}>
+            {footerData.map((footer, idx) => {
+              const hasTitle = !!footer.title;
+              const hasSubTitle = !!footer.subTitle;
+
+              return (
+                <div
+                  key={idx}
+                  className={`${styles.wrap_service} ${
+                    hasTitle ? styles.wrap_tags : styles.wrap_etc
+                  }`}
+                >
+                  <div className={styles.inner_service}>
+                    {hasTitle && <h3>{footer.title}</h3>}
+                    {hasSubTitle && (
+                      <strong className={styles.sub_title}>
+                        {footer.subTitle}
+                      </strong>
+                    )}
+
+                    <ul className={styles.list_service}>
+                      {footer.items.map((item, i) => (
+                        <li className={styles.item_service} key={i}>
+                          <Link
+                            to={item.link}
+                            target={item.inOut ? '_self' : '_blank'}
+                            className={styles.link_service}
+                          >
+                            {item.title}
+                            {item.inOut ? (
+                              item.down ? (
+                                <svg
+                                  xmlns='http://www.w3.org/2000/svg'
+                                  fill='none'
+                                  class='ico_footerlink'
+                                  width='9'
+                                  height='9'
+                                  viewBox='0 0 9 9'
+                                >
+                                  <path
+                                    d='M3 1L6 4.5L3 8'
+                                    stroke='#888888'
+                                  ></path>
+                                </svg>
+                              ) : (
+                                ''
+                              )
+                            ) : (
+                              <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                viewBox='0 0 9 9'
+                                class='ico_outlink'
+                                aria-hidden='true'
+                              >
+                                <g fill='none' fill-rule='evenodd'>
+                                  <path
+                                    d='M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638'
+                                    transform='translate(-935 -867) translate(836 848) translate(14 14) translate(85 5)'
+                                  ></path>
+                                </g>
+                              </svg>
+                            )}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              );
+            })}
           </section>
 
           <section></section>
