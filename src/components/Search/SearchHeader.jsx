@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import styles from './searchHeader.module.scss';
+import { useEffect } from 'react';
 
 const SearchHeader = ({ onClose }) => {
   const navigate = useNavigate();
@@ -7,6 +8,10 @@ const SearchHeader = ({ onClose }) => {
   const handleClose = () => {
     navigate('/'); // 루트로 이동
   };
+
+  useEffect(() => {
+    console.log('SearchHeader loaded');
+  }, []);
 
   return (
     <div className={styles.header}>

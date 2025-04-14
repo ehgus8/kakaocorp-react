@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './SearchModal.module.scss';
 import { useNavigate } from 'react-router-dom';
 import SearchHeader from '../Search/SearchHeader';
@@ -13,6 +13,14 @@ const SearchModal = ({ onClose }) => {
   const [searchValue, setSearchValue] = useState('');
   const [inputValue, setInputValue] = useState('');
   const navigate = useNavigate(); // 네비게이터 생성
+
+  useEffect(() => {
+    console.log('SearchModal loaded');
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {

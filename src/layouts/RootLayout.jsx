@@ -46,7 +46,11 @@ const RootLayout = () => {
         className={`${styles['doc-header']} ${isScrolled ? styles.scroll : ''} ${isOpenGnb ? styles.open_gnb : ''}`}
       >
         <div className={styles.inner_header}>
-          <MainNav openMenu={openMenu} setOpenMenu={setOpenMenu} />
+          <MainNav
+            openMenu={openMenu}
+            setOpenMenu={setOpenMenu}
+            onShow={showSearchHandler}
+          />
         </div>
       </header>
 

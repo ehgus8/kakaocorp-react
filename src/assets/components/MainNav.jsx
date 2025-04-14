@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import navData from './navData';
 import NavMenuItem from './NavMenuItem';
 
-const MainNav = ({ openMenu, setOpenMenu }) => {
+const MainNav = ({ openMenu, setOpenMenu, onShow }) => {
   const handleToggle = (id) => {
     setOpenMenu((prev) => (prev === id ? null : id));
   };
@@ -79,6 +79,9 @@ const MainNav = ({ openMenu, setOpenMenu }) => {
         </ul>
       </nav>
       <div className={styles.area_util}></div>
+
+      {/* search 버튼 임시 추가 */}
+      <button onClick={onShow}>search</button>
     </>
   );
 };

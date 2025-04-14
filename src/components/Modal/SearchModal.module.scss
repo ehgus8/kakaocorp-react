@@ -9,7 +9,7 @@
   align-items: flex-start;
   justify-content: center;
   margin-top: 5%;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .modal {
@@ -31,44 +31,6 @@
   align-items: center;
 }
 
-// .searchContainer {
-//   margin-top: 5rem; /* 헤더 아래 간격 조정 (필요에 따라 조정 가능) */
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   position: relative;
-// }
-
-// .chatBubble {
-//   position: relative;
-//   display: flex;
-//   align-items: center;
-//   background: #333;
-//   border-radius: 40px;
-//   padding: 0.6rem 1.5rem;
-//   color: white;
-//   width: fit-content;
-//   max-width: 90%;
-//   margin-top: 1rem;
-//   margin-bottom: 2rem;
-//   font-size: 1.1rem;
-//   overflow: visible;
-// }
-
-// /* 말풍선 꼬리 */
-// .chatBubble::after {
-//   content: '';
-//   position: absolute;
-//   bottom: -4px; /* 조금 더 올리기 */
-//   right: 12px; /* 말풍선에 더 가까이 */
-//   width: 16px;
-//   height: 16px;
-//   background: #333;
-//   border-bottom-left-radius: 100%;
-//   transform: rotate(45deg);
-//   z-index: 1; /* 꼬리를 말풍선 위에 보이게 */
-// }
-
 .closeButton {
   position: absolute;
   top: 1rem;
@@ -79,25 +41,6 @@
   cursor: pointer;
   color: #000;
 }
-
-// .searchInput {
-//   background: transparent;
-//   width: 400px;
-//   padding: 0.75rem 0.2rem;
-//   font-size: 1.2rem;
-//   border-radius: 8px;
-//   color: #fff;
-//   border: none;
-//   margin-left: 0.8rem;
-//   outline: none;
-// }
-
-// .characterImage {
-//   position: absolute;
-//   right: -5%;
-//   top: 10%;
-//   width: 100px;
-// }
 
 .tags {
   margin-top: 2rem;
