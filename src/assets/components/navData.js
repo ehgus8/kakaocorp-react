@@ -137,26 +137,26 @@ const navData = [
     ],
     slides: [
       {
-        smallImg: '/common/header_gnb/img4-1-2.png',
+        smallImg: '/common/header_gnb/img4.png',
         title: '보도자료',
         description:
           '"하루 1만명 오가던 골목상권에서 5천 명의 온라인 단골 만들다" 카카오-북촌 계동길 상인회...',
         link: '#',
       },
       {
-        smallImg: '/common/header_gnb/img4-2-2.png',
+        smallImg: '/common/header_gnb/img4.png',
         title: '보도자료',
         description: '카카오프렌즈, 양재천에서 벚꼬 시즌 오프라인 이벤트 진행',
         link: '#',
       },
       {
-        smallImg: '/common/header_gnb/img4-3-2.png',
+        smallImg: '/common/header_gnb/img4.png',
         title: '보도자료',
         description: '카카오메이커스, 누적 거래액 1조원 돌파',
         link: '#',
       },
       {
-        smallImg: '/common/header_gnb/img4-4-2.png',
+        smallImg: '/common/header_gnb/img4.png',
         title: '보도자료',
         description:
           '소셜부랜드 "민들레마음"과 따뜻한 마음 전해\n카카오톡 선물하기, 2년 연속 중증희귀난치질환 환아와...',
