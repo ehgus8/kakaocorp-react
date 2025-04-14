@@ -16,7 +16,16 @@ const SearchHeader = ({ onClose }) => {
   return (
     <div className={styles.header}>
       <span className={styles.title}>kakao</span>
-      <button className={styles.closeButton} onClick={onClose}>
+      <button
+        className={styles.closeButton}
+        onClick={() => {
+          console.log('Close button clicked');
+          if (onClose) {
+            onClose(); // 부모 컴포넌트에서 받은 onClose 함수 호출
+          }
+          handleClose(); // 루트로 이동하는 함수 호출
+        }}
+      >
         ×
       </button>
     </div>

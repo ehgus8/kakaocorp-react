@@ -27,6 +27,7 @@ const SearchModal = ({ onClose }) => {
       e.preventDefault();
       setSearchValue(inputValue);
       navigate(`/?searchKeyword=${encodeURIComponent(inputValue)}`);
+      onClose(); // 모달 닫기
     }
   };
 
@@ -39,11 +40,16 @@ const SearchModal = ({ onClose }) => {
     }
   };
 
+  const handleClose = () => {
+    console.log('SearchModal close button clicked.');
+    onClose(); // 모달을 닫는 함수 호출
+  };
+
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
         <div className={styles.modalHeader}>
-          <SearchHeader onClose={onClose} />
+          <SearchHeader onClose={handleClose} />
           <div className={styles.searchSection}>
             <SearchInput
               inputValue={inputValue}

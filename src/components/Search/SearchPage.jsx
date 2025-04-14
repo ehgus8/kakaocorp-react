@@ -98,26 +98,31 @@ const SearchPage = ({ onClose }) => {
       <div className={styles.modal}>
         <div className={styles.modalHeader}>
           <SearchHeader onClose={onClose} />
-          <SearchInput
-            inputValue={inputValue} // inputValue 전달
-            setInputValue={setInputValue} // setInputValue 전달
-            setSearchValue={setSearchValue}
-            submitHandler={submitHandler} // submitHandler 전달
-            onKeyDown={handleKeyDown} // handleKeyDown 전달
-          />
         </div>
-        {/* 검색 결과 */}
-        <div className={styles.searchResults}>
-          <h2 className={styles.resultText}>
-            '{searchValue}' 검색 결과입니다.
-          </h2>
-          <SearchResultList
-            results={dummyResults}
-            searchValue={searchValue}
-            expandedId={expandedId}
-            setExpandedId={setExpandedId}
-          />
-        </div>
+
+        {/* <div className={styles.searchSection}> */}
+        <SearchInput
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+          setSearchValue={setSearchValue}
+          submitHandler={submitHandler}
+          onKeyDown={handleKeyDown}
+        />
+        {/* </div> */}
+
+        {searchValue && (
+          <div className={styles.searchResults}>
+            <p className={styles.resultText}>
+              '{searchValue}' 검색 결과입니다.
+            </p>
+            <SearchResultList
+              results={dummyResults}
+              searchValue={searchValue}
+              expandedId={expandedId}
+              setExpandedId={setExpandedId}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
