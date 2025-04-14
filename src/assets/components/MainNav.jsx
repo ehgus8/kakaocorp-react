@@ -1,8 +1,29 @@
 import React from 'react';
 import styles from './MainNav.module.scss';
 import { NavLink, useLocation, Link } from 'react-router-dom';
+import Slick from './Slick';
+import SlideCard from './SlideCard';
 
 const MainNav = () => {
+  const slideData = [
+    {
+      bigImg: 'https://placehold.co/600x400/FFCCCC',
+      smallImg: 'https://placehold.co/100x100/FF6666',
+      title: '첫 번째 슬라이드',
+      description: '이건 예시 설명 텍스트입니다.',
+    },
+    {
+      bigImg: 'https://placehold.co/600x400/CCFFCC',
+      smallImg: 'https://placehold.co/100x100/66FF66',
+      title: '두 번째 슬라이드',
+      description: '작은 이미지와 텍스트 포함!',
+    },
+  ];
+
+  const slideItems = slideData.map((data, idx) => (
+    <SlideCard key={idx} {...data} />
+  ));
+
   const location = useLocation();
 
   const activateLink = ({ isActive }) =>
@@ -91,7 +112,15 @@ const MainNav = () => {
               </ul>
               <div className={styles.cont_menu}>
                 <div className={styles['slick-slider']}>
-                  <div className={styles.slick_list}></div>
+                  <div className={styles.slick_list}>
+                    <Slick
+                      items={slideItems}
+                      infinite={false}
+                      slidesToShow={1}
+                      autoplay={false}
+                      arrows={false}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
