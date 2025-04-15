@@ -5,6 +5,7 @@ import Index from '../pages/main';
 import SearchPage from '../components/Search/SearchPage';
 import PressRelease from '../pages/presskit/PressRelease';
 import ESGPage from '../esg/ESGPage';
+import PressDetail from '../pages/presskit/PressDetail';
 
 // 라우터 설정
 export const router = createBrowserRouter([
@@ -20,6 +21,7 @@ export const router = createBrowserRouter([
       { path: 'searchKeyword', element: <SearchPage /> },
       { path: 'presskit', element: <PressRelease /> },
       {path: 'responsible/esg', element: <ESGPage />}, // ESG 페이지 추가
+      { path: 'detail/:postId', element: <PressDetail /> },
     ],
   },
 ]);

@@ -3,34 +3,47 @@
   /* overflow: hidden; */
   /* scroll */
   width: 100%;
-}
 
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease;
-  transform: translateX(-100%);
-}
-.carousel-item {
-  padding: 10px;
-}
-.carousel-button {
-  background: lightgray;
-  border: none;
-  border-radius: 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  padding: 10px 15px;
-}
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    transform: translateX(-100%);
+  }
+  .carousel-item {
+    padding: 10px;
+  }
+  .carousel-button {
+    background: #eee;
+    border: none;
+    border-radius: 48px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+  }
 
-.carousel-button.left {
-  left: 5px;
-}
+  .carousel-button.left {
+    left: 5px;
+  }
 
-.carousel-button.right {
-  right: 5px;
-}
+  .carousel-button.right {
+    right: 5px;
+  }
 
-.slick-track {
-  display: flex !important;
-  gap: 24px; /* 일정한 간격 */
-}
+  /* .slick-track {
+    display: flex !important;
+    gap: 50px; /* 일정한 간격 */
+  } */
+
+  /* @media (max-width: 1439px) {
+    .slick-track {
+      gap: 140px; /* 일정한 간격 */
+    }
+  }
+
+  @media (max-width: 767px) {
+    .slick-track {
+      gap: 30px; /* 일정한 간격 */
+    }
+  }
+} */
