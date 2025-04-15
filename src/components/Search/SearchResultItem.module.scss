@@ -7,10 +7,11 @@
   border-radius: 20px;
   overflow: hidden;
   position: relative;
-  transition: background-color 0.3s ease; /* 배경색 전환 효과 */
+  // transition: background-color 0.3s ease;
 
   .imageContainer {
     width: inherit;
+    height: 180px;
     overflow: hidden;
     flex: 1;
 
@@ -23,25 +24,36 @@
 
   .textContainer {
     width: inherit;
+    height: 180px;
     flex: 1;
     padding: 32px;
     box-sizing: border-box;
     line-height: 1.2rem;
+
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .title strong {
-  display: inline-block;
+  display: -webkit-box;
   width: 100%;
   font-weight: bold;
   margin-top: 16px;
+  -webkit-line-clamp: 3; /* 최대 줄 수 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  // background: blanchedalmond;
 }
+
 .tags {
   font-size: 1em;
-  margin-top: 32px;
+  margin-top: auto;
   white-space: nowrap; /* 줄바꿈 금지 */
   overflow: hidden; /* 넘치는 부분 숨김 */
   text-overflow: ellipsis;
+  // margin-bottom: 10px;
 }
 
 @media (max-width: 1440px) {
@@ -138,7 +150,7 @@
 
   padding: 0.5rem;
   z-index: 10;
-  animation: slideDown 0.4s ease-out;
+  animation: slideDown 0.5s ease-out;
 }
 
 .iconButton {
@@ -152,6 +164,17 @@
   height: 25px;
   align-items: center;
   justify-content: center;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .iconButton:hover {

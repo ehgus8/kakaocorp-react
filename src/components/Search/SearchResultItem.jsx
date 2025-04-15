@@ -33,9 +33,38 @@ const SearchResultItem = ({ result, expanded, toggle }) => {
                     )
                   }
                 >
-                  1
+                  <svg
+                    style={{
+                      width: '25px',
+                      height: '25px',
+                      overflow: 'visible',
+                    }}
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='0 0 40 40'
+                    width='40'
+                    height='40'
+                  >
+                    <path
+                      d='M9.375 1.5C5.025 1.5 1.5 4.393 1.5 7.962c0 2.718 1.151 3.858 2.949 5.042l.01 3.315c0 .149.178.234.303.145L7.827 14.3c.5.082 1.018.125 1.548.125 4.35 0 7.875-2.893 7.875-6.463 0-3.569-3.526-6.462-7.875-6.462'
+                      transform='translate(0, -12)'
+                      style={{ fill: 'var(--colorFg1)' }}
+                    />
+                  </svg>
                 </button>
-                <button className={styles.iconButton}>2</button>
+                <button className={styles.iconButton}>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='0 0 20 20'
+                    width='20'
+                    height='20'
+                  >
+                    <path
+                      d='M 9.556 16.5 V 9.658 h 2.297 l 0.344 -2.667 h -2.64 V 5.289 c 0 -0.772 0.213 -1.298 1.321 -1.298 h 1.412 V 1.604 c -0.684 -0.073 -1.37 -0.107 -2.058 -0.105 c -2.035 0 -3.43 1.243 -3.43 3.525 v 1.967 H 4.5 v 2.666 h 2.303 V 16.5 h 2.753 Z'
+                      transform='translate(-10, 10)'
+                      style={{ fill: 'var(--colorFg1)' }}
+                    />
+                  </svg>
+                </button>
                 <button className={styles.iconButton}>3</button>
                 <button className={styles.iconButton}>4</button>
               </div>
