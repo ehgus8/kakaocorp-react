@@ -7,6 +7,7 @@ import MainNav from '../assets/components/MainNav';
 import footerData from '../assets/components/footerData';
 import footerGroupData from '../assets/components/footerGroupData';
 import SearchModal from '../components/Modal/SearchModal';
+import SearchPage from '../components/Search/SearchPage';
 
 const RootLayout = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,7 +39,7 @@ const RootLayout = () => {
   // 모달을 열고 닫아 주는 핸들러
   const showSearchHandler = () => {
     setSearchIsShown(true);
-    document.body.style.paddingTop = '30%';
+    document.body.style.paddingTop = '20%';
   };
   const hideSearchHandler = () => {
     setSearchIsShown(false);
@@ -69,7 +70,7 @@ const RootLayout = () => {
 
       <main className={styles.main}>
         {/* 바뀌는 부분(동적 컴포넌트)이 들어갈 자리 */}
-        <Outlet />
+        {searchQuery ? <SearchPage /> : <Outlet />}
       </main>
 
       <footer className={styles.footer}>
