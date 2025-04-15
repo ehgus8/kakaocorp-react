@@ -80,24 +80,72 @@ const MainNav = ({ openMenu, setOpenMenu, onShow }) => {
       </nav>
       <div className={styles.area_util}></div>
 
-      {/* search 버튼 임시 추가 */}
-      <button onClick={onShow} className={styles.btnStyle}>
-        <svg
-          className={styles.searchIcon}
-          xmlns='http://www.w3.org/2000/svg'
-          width='30'
-          height='30'
-          fill='currentColor'
-          viewBox='0 0 30 30'
-        >
-          <path
-            transform='translate(1, 1)'
-            fill-rule='evenodd'
-            d='M12.9 14.32a8 8 0 111.414-1.414l4.387 4.386a1 1 0 01-1.414 1.415l-4.387-4.387zM14 8a6 6 0 11-12 0 6 6 0 0112 0z'
-            clip-rule='evenodd'
-          />
-        </svg>
-      </button>
+      {/* 아이콘 버튼 추가 */}
+      <div className='icon-button-group'>
+        <button onClick={onShow} className={styles.btnStyle}>
+          <svg
+            className={styles.searchIcon}
+            xmlns='http://www.w3.org/2000/svg'
+            width='30'
+            height='30'
+            fill='currentColor'
+            viewBox='0 0 30 30'
+          >
+            <path
+              transform='translate(1, 1)'
+              fill-rule='evenodd'
+              d='M12.9 14.32a8 8 0 111.414-1.414l4.387 4.386a1 1 0 01-1.414 1.415l-4.387-4.387zM14 8a6 6 0 11-12 0 6 6 0 0112 0z'
+              clip-rule='evenodd'
+            />
+          </svg>
+        </button>
+        <button className={styles.btnStyle}>
+          <svg
+            className={styles.searchIcon}
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 30 30'
+            width='30'
+            height='30'
+          >
+            <g fill='none' fillRule='evenodd'>
+              <g strokeWidth='1.35'>
+                <path
+                  transform='translate(1, 1)'
+                  d='M19.353 9.914c0 5.213-4.226 9.438-9.438 9.438-5.213 0-9.438-4.225-9.438-9.438C.477 4.702 4.702.477 9.915.477c5.212 0 9.438 4.225 9.438 9.437z'
+                />
+                <path
+                  transform='translate(1, 1)'
+                  strokeLinejoin='round'
+                  d='M13.662 9.914c0 5.213-3.748 9.438-3.748 9.438s-3.747-4.225-3.747-9.438c0-5.212 3.747-9.437 3.747-9.437s3.748 4.225 3.748 9.437z'
+                />
+                <path
+                  transform='translate(1, 1)'
+                  d='M.876 7.018L18.952 7.018M.876 12.811L18.952 12.811'
+                />
+              </g>
+            </g>
+          </svg>
+        </button>
+
+        <button className={styles.btnStyle}>
+          <svg
+            className={styles.searchIcon}
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 30 30'
+            width='30'
+            height='30'
+          >
+            <g fill='none' fillRule='evenodd' strokeLinejoin='round'>
+              <g strokeWidth='1.5'>
+                <path
+                  transform='translate(2, 2)'
+                  d='M16.086 13.417c-5.013 0-9.076-4.04-9.076-9.023 0-1.596.42-3.093 1.152-4.394C3.58.456 0 4.3 0 8.977 0 13.961 4.064 18 9.076 18c3.407 0 6.372-1.868 7.924-4.628-.3.03-.605.045-.914.045z'
+                />
+              </g>
+            </g>
+          </svg>
+        </button>
+      </div>
     </>
   );
 };

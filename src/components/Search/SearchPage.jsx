@@ -67,7 +67,11 @@ const SearchPage = ({ onClose }) => {
     <div className={styles.overlay}>
       <div className={styles.modal}>
         <div className={styles.modalHeader}>
-          {showMainHeader ? <MainNav /> : <SearchHeader onClose={onClose} />}
+          {showMainHeader ? (
+            <div className={styles.mainNavWrapper}></div>
+          ) : (
+            <SearchHeader onClose={onClose} />
+          )}
         </div>
 
         {/* <div className={styles.searchSection}> */}
