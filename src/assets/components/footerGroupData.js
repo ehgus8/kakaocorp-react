@@ -59,7 +59,7 @@ const footerGroupData = [
       {
         title: '운영정책',
         link: '#',
-        inOut: true,
+        inOut: false,
       },
       {
         title: '안전보건제안',
