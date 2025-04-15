@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import styles from './SearchModal.module.scss';
 import { useNavigate } from 'react-router-dom';
 import SearchHeader from '../Search/SearchHeader';
 import SearchInput from '../Search/SearchInput';
+import dummyArticleList from '../../assets/dummy/dummyArticleList';
 
 const SearchModal = ({ onClose }) => {
   const [searchValue, setSearchValue] = useState('');
@@ -47,6 +48,13 @@ const SearchModal = ({ onClose }) => {
     onClose(); // 모달 닫기
   };
 
+  const randomTags = useMemo(() => {
+    const allTags = dummyArticleList.flatMap((item) => item.tags); // 모든 태그 수집
+    const uniqueTags = [...new Set(allTags)]; // 중복 제거
+    const shuffled = uniqueTags.sort(() => 0.5 - Math.random()); // 셔플
+    return shuffled.slice(0, 5); // 앞에서 5개 추출
+  }, []);
+
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
@@ -62,13 +70,7 @@ const SearchModal = ({ onClose }) => {
             />
 
             <div className={styles.tags}>
-              {[
-                '#상생사례',
-                '#만약약국',
-                '#민들레마음',
-                '#중증희귀난치질환 환아',
-                '#만우절 이벤트',
-              ].map((tag, idx) => (
+              {randomTags.map((tag, idx) => (
                 <span
                   key={idx}
                   className={styles.tag}

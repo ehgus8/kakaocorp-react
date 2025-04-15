@@ -114,10 +114,12 @@
   z-index: 2;
   text-align: right;
   padding-left: 15px;
+  font-weight: bold;
 }
 
 .toggleButton.expanded {
   color: white;
+  font-weight: lighter;
 }
 
 .toggleWrapper {

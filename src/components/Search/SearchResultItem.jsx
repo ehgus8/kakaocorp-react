@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './SearchResultItem.module.scss';
-import loudspeaker from '/src/assets/dummy/loudspeaker.webp';
+// import loudspeaker from '/src/assets/dummy/loudspeaker.webp';
 
 const SearchResultItem = ({ result, expanded, toggle }) => {
   console.log(`Toggle state for ${result.id}: ${expanded}`); // 로그 추가
@@ -11,7 +11,7 @@ const SearchResultItem = ({ result, expanded, toggle }) => {
       <div className={styles.textContainer}>
         <div className={styles.header}>
           <div className={styles.imageStyle}>
-            <img src={loudspeaker} width='30px' />
+            <img src='/dummy/loudspeaker.webp' width='30px' />
           </div>
           <span className={styles.category}>{result.category}</span>
           <span>{result.date}</span>

@@ -12,20 +12,18 @@ const SearchInput = ({
     <div className={styles.chatBubble}>
       <form onSubmit={submitHandler}>
         <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='16'
-          height='16'
-          fill='currentColor'
-          viewBox='0 0 16 16'
           className={styles.searchIcon}
-          style={{
-            position: 'absolute',
-            left: '15px', // 위치 조정 (왼쪽에 배치)
-            top: '50%',
-            transform: 'translateY(-50%)',
-          }}
+          xmlns='http://www.w3.org/2000/svg'
+          width='24'
+          height='24'
+          fill='currentColor'
+          viewBox='0 0 20 20'
         >
-          <path d='M11.742 10.742a6.5 6.5 0 1 0-1.414 1.414L14 14l1-1-4.242-4.242zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z' />
+          <path
+            fill-rule='evenodd'
+            d='M12.9 14.32a8 8 0 111.414-1.414l4.387 4.386a1 1 0 01-1.414 1.415l-4.387-4.387zM14 8a6 6 0 11-12 0 6 6 0 0112 0z'
+            clip-rule='evenodd'
+          />
         </svg>
         <input
           type='text'
