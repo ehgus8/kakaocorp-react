@@ -49,6 +49,7 @@
   }
 
   footer {
+    /* 상단 푸터 */
     &.footer {
       background: rgba(255, 255, 255.8);
       border-top: 1px solid #000;
@@ -148,6 +149,94 @@
         }
       }
     }
+
+    /* 하단 푸터*/
+
+    /* 푸터 페밀리사이트 */
+    .wrap_relation {
+      float: right;
+      position: relative;
+      width: 208px;
+
+      .tit_relation {
+        display: block;
+        padding: 10px 20px 12px;
+        background: #eee;
+        border-radius: 24px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #000;
+        line-height: 18px;
+        letter-spacing: -0.2px;
+        cursor: pointer;
+
+        svg {
+          float: right;
+          width: 14px;
+          height: 14px;
+          margin-top: 3px;
+          fill: #666;
+        }
+      }
+
+      .list_subinfo {
+        display: none;
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        padding: 16px 0;
+        background: #eee;
+        border-radius: 12px;
+
+        li + li {
+          margin-top: 12px;
+        }
+
+        li {
+          a {
+            display: block;
+            padding: 0 20px;
+            font-size: 12px;
+            color: #666;
+            white-space: nowrap;
+            text-decoration: none;
+
+            svg {
+              width: 9px;
+              height: 9px;
+              stroke: #999;
+              stroke-width: 1.3;
+              margin: 5px 0 0 4px;
+            }
+          }
+        }
+      }
+
+      &.info_open {
+        .ico_plus {
+          transform: rotate(-45deg);
+        }
+
+        .list_subinfo {
+          display: block;
+        }
+      }
+    }
+
+    /* 푸터 카피레이터 */
+    .txt_copyright {
+      display: block;
+      padding-top: 6px;
+      font-size: 13px;
+      letter-spacing: -0.2px;
+      color: #888;
+      clear: both;
+
+      a {
+        color: #888;
+        text-decoration: none;
+      }
+    }
   }
 }
 
@@ -222,6 +311,18 @@
             padding-top: 80px;
           }
         }
+      }
+
+      /* 푸터 페밀리사이트 */
+      .wrap_relation {
+        .list_subinfo {
+          width: 100%;
+          bottom: 52px;
+        }
+      }
+
+      .txt_copyright {
+        padding-top: 12px;
       }
     }
   }
