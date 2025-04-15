@@ -81,7 +81,23 @@ const MainNav = ({ openMenu, setOpenMenu, onShow }) => {
       <div className={styles.area_util}></div>
 
       {/* search 버튼 임시 추가 */}
-      <button onClick={onShow}>search</button>
+      <button onClick={onShow} className={styles.btnStyle}>
+        <svg
+          className={styles.searchIcon}
+          xmlns='http://www.w3.org/2000/svg'
+          width='30'
+          height='30'
+          fill='currentColor'
+          viewBox='0 0 30 30'
+        >
+          <path
+            transform='translate(1, 1)'
+            fill-rule='evenodd'
+            d='M12.9 14.32a8 8 0 111.414-1.414l4.387 4.386a1 1 0 01-1.414 1.415l-4.387-4.387zM14 8a6 6 0 11-12 0 6 6 0 0112 0z'
+            clip-rule='evenodd'
+          />
+        </svg>
+      </button>
     </>
   );
 };

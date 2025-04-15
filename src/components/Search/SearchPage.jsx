@@ -44,7 +44,12 @@ const SearchPage = ({ onClose }) => {
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       setSearchValue(inputValue);
-      navigate(`/?searchKeyword=${encodeURIComponent(inputValue)}`);
+      const pathname = location.pathname;
+      const searchParams = new URLSearchParams(location.search);
+      // navigate(`/?searchKeyword=${encodeURIComponent(inputValue)}`);
+      searchParams.set('searchKeyword', inputValue);
+
+      navigate(`${pathname}?${searchParams.toString()}`);
     }
   };
 

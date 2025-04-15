@@ -1,14 +1,19 @@
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styles from './searchHeader.module.scss';
 import { useEffect } from 'react';
 
 const SearchHeader = ({ onClose }) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleClose = () => {
+    const { pathname } = location;
+    // 쿼리 제거하고 현재 pathname으로 이동
+    navigate(pathname, { replace: true });
+
     // navigate('/'); // 루트로 이동
     if (onClose) {
-      onClose(); // 부모 컴포넌트에서 받은 onClose 함수 호출
+      onClose();
     }
   };
 
@@ -23,7 +28,7 @@ const SearchHeader = ({ onClose }) => {
         className={styles.closeButton}
         onClick={() => {
           console.log('Close button clicked');
-          handleClose(); // 루트로 이동하는 함수 호출
+          handleClose();
         }}
       >
         ×
