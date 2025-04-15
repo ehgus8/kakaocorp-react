@@ -13,6 +13,8 @@ const RootLayout = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
+  const [openFooterIdx, setOpenFooterIdx] = useState(null);
+
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
   };
@@ -123,8 +125,78 @@ const RootLayout = () => {
             })}
           </section>
 
-          <section>
-            <div className={styles.group_info}></div>
+          <section className={styles.section_relation}>
+            <div className={styles.group_info}>
+              {footerGroupData.map((footer, idx) => {
+                const isOpen = openFooterIdx === idx;
+                const hasItems = !!footer.items;
+
+                return (
+                  <div
+                    key={idx}
+                    className={`${styles.wrap_info} ${isOpen ? styles.open_info : ''}`}
+                  >
+                    {hasItems ? (
+                      <>
+                        <strong
+                          className={styles.link_info}
+                          onClick={
+                            () => setOpenFooterIdx(isOpen ? null : idx) // 토글 방식
+                          }
+                        >
+                          {footer.title}
+                          <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            viewBox='0 0 9 9'
+                            className={styles.ico_arrow}
+                          >
+                            <path
+                              d='M8 3L4.5 6 1 3'
+                              stroke='currentColor'
+                              strokeWidth='1'
+                              fill='none'
+                            />
+                          </svg>
+                        </strong>
+                        <ul className={styles.list_subinfo}>
+                          {footer.items.map((item, i) => (
+                            <li key={i}>
+                              <Link
+                                to={item.link}
+                                target={item.inOut ? '_self' : '_blank'}
+                              >
+                                <span>{item.title}</span>
+                                {!item.inOut && (
+                                  <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width='9'
+                                    height='9'
+                                    viewBox='0 0 9 9'
+                                    aria-hidden='true'
+                                  >
+                                    <g fill='none'>
+                                      <path
+                                        d='M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638'
+                                        transform='translate(-935 -867) translate(836 848) translate(14 14) translate(85 5)'
+                                      ></path>
+                                    </g>
+                                  </svg>
+                                )}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    ) : (
+                      <Link to={footer.link} className={styles.single_link}>
+                        {footer.title}
+                      </Link>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
             <div
               className={`${styles.wrap_relation} ${isOpen ? styles.info_open : ''}`}
             >
