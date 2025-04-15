@@ -1,101 +1,3 @@
-.cardContainer {
-  width: 630px;
-  height: 679px;
-  display: flex;
-  flex-direction: column;
-  background-color: #f3f3f3;
-  border-radius: 20px;
-  overflow: hidden;
-  .imageContainer {
-    width: inherit;
-    overflow: hidden;
-    flex: 1;
-
-    img {
-      width: inherit;
-      /* height: 300px; */
-      object-fit: cover;
-    }
-  }
-
-  .textContainer {
-    width: inherit;
-    flex: 1;
-    padding: 32px;
-    box-sizing: border-box;
-  }
-}
-
-.title strong {
-  overflow: hidden;
-  display: -webkit-box;
-  width: 100%;
-  font-weight: bold;
-  margin-top: 16px;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  white-space: normal;
-  font-size: 30px;
-  letter-spacing: -0.8px;
-}
-.tags {
-  font-size: 1em;
-  margin-top: 32px;
-}
-
-@media (max-width: 1440px) {
-  .cardContainer {
-    width: 464px;
-    height: 524px;
-  }
-  .title strong {
-    font-size: 26px;
-    letter-spacing: -0.5px;
-  }
-}
-
-@media (max-width: 767px) {
-  .cardContainer {
-    width: 340px;
-    height: 400px;
-  }
-  .title strong {
-    margin-top: 12px;
-    font-size: 16px;
-  }
-  .tags {
-    font-size: 0.8em;
-  }
-}
-
-.minicardContainer {
-  text-align: initial;
-  width: 220px;
-  height: 130px;
-  display: flex;
-  flex-direction: column;
-  background-color: #f3f3f3;
-  border-radius: 20px;
-}
-
-.category {
-  text-align: center;
-  font-size: 0.8em;
-  display: inline-block;
-  width: 68px;
-  height: 30px;
-  background-color: white;
-  line-height: 30px;
-  padding: 3px 6px;
-  border-radius: 10px;
-  letter-spacing: -1px;
-}
-
-.noLinkStyle {
-  color: inherit;
-  text-decoration: none;
-}
-
 .wrap_card {
   width: 630px;
   height: 670px;
@@ -340,4 +242,57 @@
       bottom: 162px;
     }
   }
+}
+
+// mini card css
+
+.link_content {
+  outline-offset: -2px;
+  text-decoration: none;
+  color: #333;
+}
+
+.wrap_link {
+  display: block;
+  height: 130px;
+  padding: 22px 20px;
+  border-radius: 16px;
+  background-color: #f3f3f3;
+  box-sizing: border-box;
+}
+
+.inner_info {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: #333;
+}
+
+.txt_category,
+.txt_date {
+  margin-left: 8px;
+  font-size: 13px;
+  line-height: 1.53;
+  letter-spacing: -0.2px;
+}
+
+.txt_category {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 8px;
+  color: #000;
+  background-color: #fff;
+}
+
+.tit_link {
+  display: -webkit-box;
+  overflow: hidden;
+  margin-top: 8px;
+  font-size: 17px;
+  line-height: 1.59;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: #000;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }

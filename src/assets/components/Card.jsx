@@ -2,24 +2,49 @@ import React from 'react';
 import styles from './Card.module.scss';
 import { Link } from 'react-router-dom';
 
-export const MiniCard = ({ articleItem }) => {
+// export const MiniCard = ({ articleItem }) => {
+//   return (
+//     <Link
+//       to={`/detail/${articleItem.id}`}
+//       className={styles.noLinkStyle}
+//       draggable={false}
+//     >
+//       <div className={styles.minicardContainer}>
+//         <div className={styles.textContainer}>
+//           <div className={styles.header}>
+//             <img src='../../dummy/loudspeaker.webp' width='24px' />
+//             <span>보도자료</span>
+//             <span>{articleItem.date}</span>
+//           </div>
+//           <div className='title'>
+//             <strong>{articleItem.title}</strong>
+//           </div>
+//         </div>
+//       </div>
+//     </Link>
+//   );
+// };
+
+export const MiniCard = ({ item }) => {
   return (
     <Link
-      to={`/detail/${articleItem.id}`}
-      className={styles.noLinkStyle}
+      className={styles.link_content}
+      to={`/detail/${item.id}`}
+      onClick={() => window.scrollTo(0, 0)}
       draggable={false}
     >
-      <div className={styles.minicardContainer}>
-        <div className={styles.textContainer}>
-          <div className={styles.header}>
-            <img src='../../dummy/loudspeaker.webp' width='24px' />
-            <span>보도자료</span>
-            <span>{articleItem.date}</span>
-          </div>
-          <div className='title'>
-            <strong>{articleItem.title}</strong>
-          </div>
+      <div className={styles.wrap_link}>
+        <div className={styles.inner_info}>
+          <img
+            src={item.iconSrc}
+            className={styles.ico_category}
+            width='24'
+            height='24'
+          />
+          <span className={styles.txt_category}>{item.category}</span>
+          <span className={styles.txt_date}>{item.date}</span>
         </div>
+        <strong className={styles.tit_link}>{item.title}</strong>
       </div>
     </Link>
   );
@@ -36,51 +61,9 @@ export const MiniCard = ({ articleItem }) => {
   category: '보도자료',
   imgSrc: '../../dummy/11517.webp',
   iconSrc: '../../dummy/loudspeaker.webp',
+  content: `내용입니다.`
 }
 */
-
-// const Card = ({ item, imgPosition = 'top' }) => {
-//   return (
-//     <Link
-//       onClick={() => window.scrollTo(0, 0)}
-//       to={`/detail/${item.id}`}
-//       className={styles.noLinkStyle}
-//       draggable={false}
-//     >
-//       <div className={styles.cardContainer}>
-//         {/* 이미지가 위에 있는 경우 top */}
-//         {imgPosition === 'top' && (
-//           <div className={styles.imageContainer}>
-//             <img src={item.imgSrc} />
-//           </div>
-//         )}
-//         <div className={styles.textContainer}>
-//           <div className={styles.header}>
-//             <img src={item.iconSrc} width='32px' />
-//             <span className={styles.category}>{item.category}</span>
-//             <span>{item.date}</span>
-//           </div>
-//           <div className={styles.title}>
-//             <strong>{item.title}</strong>
-//           </div>
-//           <div className={styles.tags}>
-//             {item.tags.map((tag) => (
-//               <span>{tag} </span>
-//             ))}
-//           </div>
-//         </div>
-//         {/* 이미지가 아래에 있는 경우 bottom */}
-//         {imgPosition === 'bottom' && (
-//           <div className={styles.imageContainer}>
-//             <img src={item.imgSrc} />
-//           </div>
-//         )}
-//       </div>
-//     </Link>
-//   );
-// };
-
-// export default Card;
 
 const Card = ({ item, imgPosition = 'top' }) => {
   return (
