@@ -1,66 +1,93 @@
 import React, { useState } from 'react';
 import styles from './NewsList.module.scss';
 import { MiniCard } from '../../assets/components/Card';
+import { Link } from 'react-router-dom';
+import PressSlick from './PressSlick';
 
-const ListItem = ({ articleItem }) => {
+const ListItem = ({ item }) => {
   return (
-    <div className={styles.newsListSection}>
-      <div className={styles.listContent}>
-        <div className={styles.textSection}>
-          <div className={styles.date}>{articleItem.date}</div>
-          <div className={styles.title}>{articleItem.title}</div>
-          <div className={styles.tags}></div>
-        </div>
-        <div className={styles.imageSection}>
-          <img src={articleItem.imgSrc} />
+    <Link
+      to={`/detail/${item.id}`}
+      className={`${styles.noLinkStyle} ${styles.link_news}`}
+      onClick={() => window.scrollTo(0, 0)}
+    >
+      <div className={styles.wrap_txt}>
+        <strong className={styles.txt_date}>{item.date}</strong>
+        <strong className={styles.title_news}>{item.title}</strong>
+        <div className={styles.wrap_hash}>
+          {item.tags.map((tag) => `${tag}`)}
         </div>
       </div>
-      <div className={styles.tagSection}>
-        {articleItem.tags.map((tag) => (
-          <span>{tag}</span>
-        ))}
+      <div className={styles.wrap_thumb}>
+        <img src={item.imgSrc} className={styles.thumb_img} />
       </div>
+    </Link>
+  );
+};
+
+const RecommendationSection = ({ firstItem, secondItem }) => {
+  return (
+    <div>
+      <MiniCard articleItem={firstItem} />
+      <MiniCard articleItem={secondItem} />
     </div>
   );
 };
 
-const RecommendationSection = () => {
-  return <MiniCard />;
-};
-
 const NewsList = ({ articleList }) => {
-  const [visibleCount, setVisibleCount] = useState(4);
-
-  const [recommendIndices, setRecommendIndices] = useState({
-    firstIndex: 0,
-    secondIndex: 1,
-  });
+  const [visibleCount, setVisibleCount] = useState(6);
 
   const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + 4);
+    setVisibleCount((prev) => prev + 6);
   };
-
+  const settings = {
+    infinite: false,
+    dots: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+  };
   return (
-    <div className={styles.mainContainer}>
-      <div className={styles.listContainer}>
-        {articleList.slice(0, visibleCount).map((article) => (
-          <ListItem articleItem={article} />
-        ))}
-
+    <div className={styles.cont_news}>
+      <div className={styles.wrap_list}>
+        <ul className={styles.list_news}>
+          {articleList.slice(0, visibleCount).map((article) => (
+            <li className={styles.item_news}>
+              <ListItem item={article} />
+            </li>
+          ))}
+        </ul>
         {visibleCount < articleList.length && (
-          <div onClick={handleLoadMore}>더보기</div>
+          <button onClick={handleLoadMore} className={styles.btn_more}>
+            더보기
+          </button>
         )}
       </div>
 
-      <div className={styles.recommendationSection}>
-        <MiniCard articleItem={articleList[recommendIndices.firstIndex]} />
-        <MiniCard articleItem={articleList[recommendIndices.secondIndex]} />
-        <div>
-          <div className={`${styles.btn} ${styles.barBtn}`}></div>
-          <div className={`${styles.btn} ${styles.circleBtn}`}></div>
-          <div className={`${styles.btn} ${styles.circleBtn}`}></div>
-          <div className={`${styles.btn} ${styles.circleBtn}`}></div>
-        </div>
+      <div className={styles.wrap_menu}>
+        <PressSlick
+          // styles={{ width: '100%', margin: '0 auto' }}
+          items={[
+            <RecommendationSection
+              firstItem={articleList[0]}
+              secondItem={articleList[1]}
+            />,
+            <RecommendationSection
+              firstItem={articleList[2]}
+              secondItem={articleList[3]}
+            />,
+            <RecommendationSection
+              firstItem={articleList[4]}
+              secondItem={articleList[5]}
+            />,
+            <RecommendationSection
+              firstItem={articleList[6]}
+              secondItem={articleList[7]}
+            />,
+          ]}
+          settings={settings}
+        />
       </div>
     </div>
   );

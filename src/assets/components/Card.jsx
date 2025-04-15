@@ -42,6 +42,7 @@ export const MiniCard = ({ articleItem }) => {
 const Card = ({ item, imgPosition = 'top' }) => {
   return (
     <Link
+      onClick={() => window.scrollTo(0, 0)}
       to={`/detail/${item.id}`}
       className={styles.noLinkStyle}
       draggable={false}

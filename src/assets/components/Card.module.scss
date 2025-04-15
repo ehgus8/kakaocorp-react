@@ -27,10 +27,16 @@
 }
 
 .title strong {
-  display: inline-block;
+  overflow: hidden;
+  display: -webkit-box;
   width: 100%;
   font-weight: bold;
   margin-top: 16px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  white-space: normal;
+  font-size: 30px;
+  letter-spacing: -0.8px;
 }
 .tags {
   font-size: 1em;
@@ -42,6 +48,10 @@
     width: 464px;
     height: 524px;
   }
+  .title strong {
+    font-size: 26px;
+    letter-spacing: -0.5px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -51,6 +61,7 @@
   }
   .title strong {
     margin-top: 12px;
+    font-size: 16px;
   }
   .tags {
     font-size: 0.8em;
@@ -65,12 +76,6 @@
   flex-direction: column;
   background-color: #f3f3f3;
   border-radius: 20px;
-}
-
-@media (max-width: 1024px) {
-  .minicardContainer {
-    display: none;
-  }
 }
 
 .category {

@@ -3,9 +3,14 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const PressSlick = ({ items = [], settings, refElement }) => {
+const PressSlick = ({
+  items = [],
+  settings,
+  refElement,
+  styles = { width: '100%', margin: '0 auto' },
+}) => {
   return (
-    <div style={{ width: '100%', margin: '0 auto' }}>
+    <div style={styles}>
       <Slider {...settings} ref={refElement}>
         {items.map((item, index) => (
           <div key={index}>
