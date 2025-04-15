@@ -4,11 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import SearchHeader from '../Search/SearchHeader';
 import SearchInput from '../Search/SearchInput';
 
-// 모달 창을 띄울 때 알림창에 포커스를 주도록 뒷배경을 어둡게 만드는 용도.
-const BackDrop = ({ onConfirm }) => {
-  return <div onClick={onConfirm} className={styles.backdrop} />;
-};
-
 const SearchModal = ({ onClose }) => {
   const [searchValue, setSearchValue] = useState('');
   const [inputValue, setInputValue] = useState('');
@@ -45,6 +40,13 @@ const SearchModal = ({ onClose }) => {
     onClose(); // 모달을 닫는 함수 호출
   };
 
+  const handleTagClick = (tag) => {
+    const trimmedTag = tag.replace(/^#/, ''); // '#' 제거
+    setSearchValue(trimmedTag);
+    navigate(`/?searchKeyword=${encodeURIComponent(trimmedTag)}`);
+    onClose(); // 모달 닫기
+  };
+
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
@@ -61,13 +63,18 @@ const SearchModal = ({ onClose }) => {
 
             <div className={styles.tags}>
               {[
-                '#상상사례',
+                '#상생사례',
                 '#만약약국',
                 '#민들레마음',
                 '#중증희귀난치질환 환아',
                 '#만우절 이벤트',
               ].map((tag, idx) => (
-                <span key={idx} className={styles.tag}>
+                <span
+                  key={idx}
+                  className={styles.tag}
+                  onClick={() => handleTagClick(tag)}
+                  style={{ cursor: 'pointer' }}
+                >
                   {tag}
                 </span>
               ))}
