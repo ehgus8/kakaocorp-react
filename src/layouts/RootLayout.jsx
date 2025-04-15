@@ -4,10 +4,9 @@ import { Outlet, Link, useLocation } from 'react-router-dom';
 import styles from './RootLayout.module.scss';
 import MainNav from '../assets/components/MainNav';
 
-import footerData from '../assets/components/footerData';
-
 import SearchModal from '../components/Modal/SearchModal';
 import SearchPage from '../components/Search/SearchPage';
+import footerData from '../assets/components/footerData';
 
 const RootLayout = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -95,7 +94,7 @@ const RootLayout = () => {
                                 <svg
                                   xmlns='http://www.w3.org/2000/svg'
                                   fill='none'
-                                  class='ico_footerlink'
+                                  className={styles.ico_footerlink}
                                   width='9'
                                   height='9'
                                   viewBox='0 0 9 9'
@@ -111,11 +110,13 @@ const RootLayout = () => {
                             ) : (
                               <svg
                                 xmlns='http://www.w3.org/2000/svg'
+                                width='9'
+                                height='9'
                                 viewBox='0 0 9 9'
-                                class='ico_outlink'
+                                className={styles.ico_outlink}
                                 aria-hidden='true'
                               >
-                                <g fill='none' fill-rule='evenodd'>
+                                <g fill='none'>
                                   <path
                                     d='M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638'
                                     transform='translate(-935 -867) translate(836 848) translate(14 14) translate(85 5)'
