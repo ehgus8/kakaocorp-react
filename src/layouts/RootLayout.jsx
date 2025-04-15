@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 
 import styles from './RootLayout.module.scss';
 import MainNav from '../assets/components/MainNav';
 
 import footerData from '../assets/components/footerData';
 import footerGroupData from '../assets/components/footerGroupData';
+import SearchModal from '../components/Modal/SearchModal';
 
 const RootLayout = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,7 +38,7 @@ const RootLayout = () => {
   // 모달을 열고 닫아 주는 핸들러
   const showSearchHandler = () => {
     setSearchIsShown(true);
-    document.body.style.paddingTop = '20%';
+    document.body.style.paddingTop = '30%';
   };
   const hideSearchHandler = () => {
     setSearchIsShown(false);
@@ -53,6 +54,7 @@ const RootLayout = () => {
 
   return (
     <div className={styles.layout}>
+      {searchIsShown && <SearchModal onClose={hideSearchHandler} />}
       <header
         className={`${styles['doc-header']} ${isScrolled ? styles.scroll : ''} ${isOpenGnb ? styles.open_gnb : ''}`}
       >
