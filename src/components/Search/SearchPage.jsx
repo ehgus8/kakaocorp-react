@@ -6,70 +6,7 @@ import SearchInput from './SearchInput';
 import SearchResultList from './SearchResultList';
 import SearchModal from '../Modal/SearchModal';
 import dummyArticleList from '../../assets/dummy/dummyArticleList';
-
-// 더미 데이터
-// const dummyResults = [
-//   {
-//     id: 11517,
-//     category: '보도자료',
-//     date: '2025.03.28',
-//     title:
-//       '소셜브랜드 ‘민들레마음’과 따뜻한 마음 전해 카카오톡 선물하기, 2년 연속...',
-//     imgSrc: '/img/image1.png',
-//     tags: [
-//       '#카카오톡 선물하기',
-//       '#만약약국',
-//       '#민들레마음',
-//       '#중증희귀난치질환 환아',
-//       '#만우절 이벤트',
-//     ],
-//   },
-//   {
-//     id: 11515,
-//     category: '보도자료',
-//     date: '2024.04.01',
-//     title:
-//       '카카오톡 선물하기, 중증희귀난치질환 환아와 함께하는 만우절 이벤트 진행',
-//     imgSrc: '/img/image2.png',
-//     tags: [
-//       '#카카오커머스',
-//       '#선물하기',
-//       '#카카오톡선물하기',
-//       '#만우절',
-//       '#이벤트',
-//     ],
-//   },
-//   {
-//     id: 11516,
-//     category: '보도자료',
-//     date: '2023.03.21',
-//     title: '카카오톡 쇼핑하기, ‘상생브랜드 발굴 프로젝트 1탄’ 시작',
-//     imgSrc: '/img/image3.png',
-//     tags: ['#상생브랜드', '#카카오커머스', '#카카오톡 쇼핑하기', '#커머스CIC'],
-//   },
-//   {
-//     id: 11510,
-//     category: '보도자료',
-//     date: '2021.04.19',
-//     title: '카카오커머스, ‘프렌즈 그린라이프’ 에디션 출시',
-//     imgSrc: '/img/image4.png',
-//     tags: [
-//       '#친환경상품',
-//       '#카카오커머스',
-//       '#카카오프렌즈',
-//       '#프렌즈그린라이프',
-//     ],
-//   },
-//   {
-//     id: 11511,
-//     category: '보도자료',
-//     date: '2023.03.24',
-//     title:
-//       '카카오, 포털 다음(Daum) 뉴스에 ‘지역’ 카테고리 49개 언론사 신규 입점',
-//     imgSrc: '/img/image5.png',
-//     tags: ['#콘텐츠CIC', '#다음뉴스', '#포털 다음', '#입점프로세스'],
-//   },
-// ];
+import MainNav from '../../assets/components/MainNav';
 
 const SearchPage = ({ onClose }) => {
   const location = useLocation();
@@ -78,6 +15,18 @@ const SearchPage = ({ onClose }) => {
   const [inputValue, setInputValue] = useState('');
   const [searchValue, setSearchValue] = useState('');
   const [expandedId, setExpandedId] = useState(null);
+
+  //SearchHeader
+  const [showMainHeader, setShowMainHeader] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setShowMainHeader(scrollY > 10); // 100px 이상 스크롤 시 전환
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
@@ -99,11 +48,21 @@ const SearchPage = ({ onClose }) => {
     }
   };
 
+  useEffect(() => {
+    const footer = document.querySelector('footer');
+    if (footer) footer.style.display = 'none';
+
+    return () => {
+      // 컴포넌트 unmount 될 때 다시 보이게
+      if (footer) footer.style.display = '';
+    };
+  }, []);
+
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
         <div className={styles.modalHeader}>
-          <SearchHeader onClose={onClose} />
+          {showMainHeader ? <MainNav /> : <SearchHeader onClose={onClose} />}
         </div>
 
         {/* <div className={styles.searchSection}> */}
