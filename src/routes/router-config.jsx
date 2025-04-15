@@ -4,6 +4,7 @@ import RootLayout from '../layouts/RootLayout';
 import Index from '../pages/main';
 import SearchPage from '../components/Search/SearchPage';
 import PressRelease from '../pages/presskit/PressRelease';
+import PressDetail from '../pages/presskit/PressDetail';
 
 // 라우터 설정
 export const router = createBrowserRouter([
@@ -18,6 +19,7 @@ export const router = createBrowserRouter([
       },
       { path: 'searchKeyword', element: <SearchPage /> },
       { path: 'presskit', element: <PressRelease /> },
+      { path: 'detail/:postId', element: <PressDetail /> },
     ],
   },
 ]);
