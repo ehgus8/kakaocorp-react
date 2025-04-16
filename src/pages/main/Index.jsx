@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Index.module.scss';
+import MainHelp from './MainHelp';
 
 const Index = () => {
   return (
@@ -38,7 +39,9 @@ const Index = () => {
             ></div>
 
             {/* 헬퍼 */}
-            <div className={`${styles.cont_main} ${styles.area_help}`}></div>
+            <div className={`${styles.cont_main} ${styles.area_help}`}>
+              <MainHelp />
+            </div>
           </div>
         </article>
       </section>
