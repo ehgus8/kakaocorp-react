@@ -4,6 +4,8 @@ import RootLayout from '../layouts/RootLayout';
 import Index from '../pages/main';
 import SearchPage from '../components/Search/SearchPage';
 import PressRelease from '../pages/presskit/PressRelease';
+import ESGPage from '../esg/ESGPage';
+import MainTest from '../esg/MainTest';
 import PressDetail from '../pages/presskit/PressDetail';
 
 // 라우터 설정
@@ -19,7 +21,9 @@ export const router = createBrowserRouter([
       },
       { path: 'searchKeyword', element: <SearchPage /> },
       { path: 'presskit', element: <PressRelease /> },
+      { path: 'responsible/esg', element: <ESGPage /> }, // ESG 페이지 추가
       { path: 'detail/:postId', element: <PressDetail /> },
+      { path: 'test', element: <MainTest /> },
     ],
   },
 ]);
