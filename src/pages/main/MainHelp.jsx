@@ -5,7 +5,10 @@ const MainHelp = () => {
   return (
     <>
       <div className={styles.title}>
-        <img src='/mainHelp/ico_tit_help.gif' className={styles.titleImg} />
+        <img
+          src={`${import.meta.env.BASE_URL}/mainHelp/ico_tit_help.gif`}
+          className={styles.titleImg}
+        />
         <h2>무엇을 도와드릴까요?</h2>
       </div>
       {/* 전체 컨테이너 */}
@@ -54,7 +57,7 @@ const MainHelp = () => {
                 </div>
                 <div className={styles.imageWrapper}>
                   <img
-                    src='/mainHelp/kakaoHelp.webp'
+                    src={`${import.meta.env.BASE_URL}/mainHelp/kakaoHelp.webp`}
                     className={styles.helpImg}
                   />
                 </div>
@@ -98,7 +101,7 @@ const MainHelp = () => {
                 </div>
                 <div className={styles.imageWrapper}>
                   <img
-                    src='/mainHelp/daumHelp.webp'
+                    src={`${import.meta.env.BASE_URL}/mainHelp/daumHelp.webp`}
                     className={styles.helpImg}
                   />
                 </div>
@@ -143,7 +146,7 @@ const MainHelp = () => {
                 </div>
                 <div className={styles.imageWrapper}>
                   <img
-                    src='/mainHelp/commerceHelp.webp'
+                    src={`${import.meta.env.BASE_URL}/mainHelp/commerceHelp.webp`}
                     className={styles.helpImg}
                   />
                 </div>
@@ -171,7 +174,7 @@ const MainHelp = () => {
                     }
                   >
                     <img
-                      src='/mainHelp/icon_ch.png'
+                      src={`${import.meta.env.BASE_URL}/mainHelp/icon_ch.png`}
                       className={styles.buttonIcon}
                     />
                   </button>
@@ -185,7 +188,7 @@ const MainHelp = () => {
                     }
                   >
                     <img
-                      src='/mainHelp/icon_yt.png'
+                      src={`${import.meta.env.BASE_URL}/mainHelp/icon_yt.png`}
                       className={styles.buttonIcon}
                     />
                   </button>
@@ -199,7 +202,7 @@ const MainHelp = () => {
                     }
                   >
                     <img
-                      src='/mainHelp/icon_insta.png'
+                      src={`${import.meta.env.BASE_URL}/mainHelp/icon_yt.png`}
                       className={styles.buttonIcon}
                     />
                   </button>
@@ -213,7 +216,7 @@ const MainHelp = () => {
                     }
                   >
                     <img
-                      src='/mainHelp/icon_fb.png'
+                      src={`${import.meta.env.BASE_URL}/mainHelp/icon_fb.png`}
                       className={styles.buttonIcon}
                     />
                   </button>
@@ -227,14 +230,16 @@ const MainHelp = () => {
                     }
                   >
                     <img
-                      src='/mainHelp/icon_li.png'
+                      src={`${import.meta.env.BASE_URL}/mainHelp/icon_li.png`}
                       className={styles.buttonIcon}
                     />
                   </button>
                 </div>
               </div>
               <div className={`${styles.imageSection} ${styles.card2Image}`}>
-                <img src='/mainHelp/img_ryan.png' />
+                <img
+                  src={`${import.meta.env.BASE_URL}/mainHelp/img_ryan.png`}
+                />
               </div>
             </div>
           </div>
@@ -285,7 +290,9 @@ const MainHelp = () => {
                 </div>
               </div>
               <div className={styles.imageSection}>
-                <img src='/mainHelp/img_recruit.png' />
+                <img
+                  src={`${import.meta.env.BASE_URL}/mainHelp/img_recruit.png`}
+                />
               </div>
             </div>
           </div>
@@ -328,7 +335,10 @@ const MainHelp = () => {
               </span>
             </div>
             <div className={styles.imageWrapper}>
-              <img src='/mainHelp/img.webp' className={styles.titleImg} />
+              <img
+                src={`${import.meta.env.BASE_URL}/mainHelp/img.webp`}
+                className={styles.titleImg}
+              />
             </div>
           </div>
 
@@ -368,7 +378,10 @@ const MainHelp = () => {
               </span>
             </div>
             <div className={styles.imageWrapper}>
-              <img src='/mainHelp/img2.webp' className={styles.titleImg} />
+              <img
+                src={`${import.meta.env.BASE_URL}/mainHelp/img2.webp`}
+                className={styles.titleImg}
+              />
             </div>
           </div>
         </div>
