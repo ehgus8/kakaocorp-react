@@ -11,7 +11,10 @@ const SearchResultItemCustom = ({ result, expanded, toggle }) => {
       <div className={styles.textContainer}>
         <div className={styles.header}>
           <div className={styles.imageStyle}>
-            <img src='/dummy/loudspeaker.webp' width='30px' />
+            <img
+              src={`${import.meta.env.BASE_URL}dummy/loudspeaker.webp`}
+              width='30px'
+            />
           </div>
           <span className={styles.category}>{result.category}</span>
           <span>{result.date}</span>
