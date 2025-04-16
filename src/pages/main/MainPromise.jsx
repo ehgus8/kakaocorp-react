@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './MainTest.module.scss';
+import styles from './MainPromise.module.scss';
 
 const MainTest = () => {
   return (

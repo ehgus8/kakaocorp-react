@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Index.module.scss';
 import MainHelp from './MainHelp';
+import { AreaNews, AreaService } from './MainServiceAndNews';
+import MainTest from './MainPromise';
 
 const Index = () => {
   return (
@@ -28,15 +30,19 @@ const Index = () => {
             </div>
 
             {/* 서비스 */}
-            <div className={`${styles.cont_main} ${styles.area_service}`}></div>
+            <div className={`${styles.cont_main} ${styles.area_service}`}>
+              <AreaService />
+            </div>
 
             {/* 뉴스 */}
-            <div className={`${styles.cont_main} ${styles.area_news}`}></div>
+            <div className={`${styles.cont_main} ${styles.area_news}`}>
+              <AreaNews />
+            </div>
 
             {/* 약속과 책임 */}
-            <div
-              className={`${styles.cont_main} ${styles.area_responsible}`}
-            ></div>
+            <div className={`${styles.cont_main} ${styles.area_responsible}`}>
+              <MainTest />
+            </div>
 
             {/* 헬퍼 */}
             <div className={`${styles.cont_main} ${styles.area_help}`}>
