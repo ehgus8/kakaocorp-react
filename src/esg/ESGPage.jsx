@@ -27,47 +27,47 @@ function ESGPage() {
 
   const allCards = [
     {
-      img: `${import.meta.env.BASE_URL}/img/card_energy.png`,
+      img: `${import.meta.env.BASE_URL}img/card_energy.png`,
       title: '22년 대비\n재생에너지 2배 확대',
       desc: '제주에서 바람으로\n판교에서 태양으로',
     },
     {
-      img: '/img/card_committee.png',
+      img: `${import.meta.env.BASE_URL}img/card_committee.png`,
       title: '준법과신뢰위원회\n 설립ㆍ운영',
       desc: '신뢰 회복을 위한\n쇄신 시스템 마련',
     },
     {
-      img: '/img/card_dangol.png',
+      img: `${import.meta.env.BASE_URL}img/card_dangol.png`,
       title: '우리동네 단골시장\n 대통령상 수상',
       desc: '서비스를 통한\n전통시장의 디지털전환',
     },
     {
-      img: '/img/card_information.png',
+      img: `${import.meta.env.BASE_URL}img/card_information.png`,
       title: '정보보호 투자액\n 22년 대비 48.8% 증가',
       desc: '안정적인 서비스를 위한\n정보보호 강화',
     },
     {
-      img: '/img/card_datacenter.png',
+      img: `${import.meta.env.BASE_URL}img/card_datacenter.png`,
       title: '친환경 설계\n 카카오 데이터센터 안산',
       desc: '에너지와 물을 덜쓰는\n 친환경 설계',
     },
     {
-      img: '/img/card_together.png',
+      img: `${import.meta.env.BASE_URL}img/card_together.png`,
       title: '같이가치 긴급모금\n 100만 참여',
       desc: '튀르키예 지진 모금\n 127만 명 참여, 48억 원 모금',
     },
     {
-      img: '/img/card_it.png',
+      img: `${import.meta.env.BASE_URL}img/card_it.png`,
       title: 'IT업계 최초\n 다양성 보고서 발간',
       desc: '다양성 내재화 및\n 확산을 위한 첫 걸음',
     },
     {
-      img: '/img/card_grs.png',
+      img: `${import.meta.env.BASE_URL}img/card_grs.png`,
       title: 'GRS 인증을 통한\n 친환경 이커머스 강화',
       desc: '재사용과 새활용을 통한\n 자원순환 연결고리',
     },
     {
-      img: '/img/card_jegaberchi.png',
+      img: `${import.meta.env.BASE_URL}img/card_jegaberchi.png`,
       title: '제가버치 누적거래액\n 300억 원 달성',
       desc: '판로를 찾지 못한\n 농수산물의 제값 찾기',
     },
@@ -135,7 +135,10 @@ function ESGPage() {
         {/* ESG Header */}
         <section className={styles.esgHeader}>
           <div className={styles.headerLeft}>
-            <img src='/img/ico_tit_esg.gif' alt='ESG 아이콘' />
+            <img
+              src={`${import.meta.env.BASE_URL}img/ico_tit_esg.gif`}
+              alt='ESG 아이콘'
+            />
             <h2>ESG 보고서</h2>
           </div>
           <DropDown />
@@ -144,7 +147,10 @@ function ESGPage() {
         {isShrunkHeaderVisible && (
           <div className={styles.shrunkHeader}>
             <div className={styles.left}>
-              <img src='/img/ico_tit_esg.gif' alt='ESG' />
+              <img
+                src={`${import.meta.env.BASE_URL}img/ico_tit_esg.gif`}
+                alt='ESG'
+              />
               <span>ESG</span>
             </div>
             <DropDown small />
@@ -209,7 +215,7 @@ function ESGPage() {
               <div className={styles.card}>
                 <img
                   className={styles.img1}
-                  src='/img/msci_logo.png'
+                  src={`${import.meta.env.BASE_URL}img/msci_logo.png`}
                   alt='MSCI'
                 />
                 <br />
@@ -220,14 +226,14 @@ function ESGPage() {
                 <p>(2023~2024)</p>
                 <img
                   className={styles.img2}
-                  src='/img/outcome_01_250121.png'
+                  src={`${import.meta.env.BASE_URL}img/outcome_01_250121.png`}
                   alt='MSCI A등급'
                 />
               </div>
               <div className={styles.card}>
                 <img
                   className={styles.img1}
-                  src='/img/esg_logo.png'
+                  src={`${import.meta.env.BASE_URL}/img/esg_logo.png`}
                   alt='ESG기준원'
                 />
                 <br />
@@ -238,14 +244,14 @@ function ESGPage() {
                 <p>(2021~2024)</p>
                 <img
                   className={styles.img2}
-                  src='/img/outcome_02_250121.png'
+                  src={`${import.meta.env.BASE_URL}img/outcome_02_250121.png`}
                   alt='ESG A등급'
                 />
               </div>
               <div className={styles.card}>
                 <img
                   className={styles.img1}
-                  src='/img/snp_logo.png'
+                  src={`${import.meta.env.BASE_URL}img/snp_logo.png`}
                   alt='S&P'
                 />
                 <br />
@@ -256,14 +262,14 @@ function ESGPage() {
                 <p>(2023~2024)</p>
                 <img
                   className={styles.img2}
-                  src='/img/outcome_03.png'
+                  src={`${import.meta.env.BASE_URL}img/outcome_03.png`}
                   alt='S&P Top1%'
                 />
               </div>
               <div className={styles.card}>
                 <img
                   className={styles.img1}
-                  src='/img/cdp_logo.png'
+                  src={`${import.meta.env.BASE_URL}img/cdp_logo.png`}
                   alt='CDP'
                 />
                 <br />
@@ -274,7 +280,7 @@ function ESGPage() {
                 <p>(2023)</p>
                 <img
                   className={styles.img2}
-                  src='/img/outcome_04.png'
+                  src={`${import.meta.env.BASE_URL}img/outcome_04.png`}
                   alt='CDP A등급'
                 />
               </div>
@@ -298,7 +304,10 @@ function ESGPage() {
                   <br />
                   22년 대비 20% 감소
                 </p>
-                <img src='/img/indicators_greenGas.png' alt='co2' />
+                <img
+                  src={`${import.meta.env.BASE_URL}img/indicators_greenGas.png`}
+                  alt='co2'
+                />
               </div>
 
               <div className={`${styles.card} ${styles.blue}`}>
@@ -310,7 +319,10 @@ function ESGPage() {
                   <br />
                   (2024년 2월 기준)
                 </p>
-                <img src='/img/indicators_director.png' alt='director' />
+                <img
+                  src={`${import.meta.env.BASE_URL}img/indicators_director.png`}
+                  alt='director'
+                />
               </div>
 
               <div className={`${styles.card} ${styles.pink}`}>
@@ -320,7 +332,10 @@ function ESGPage() {
                   <strong>30,853</strong>백만원
                 </p>
                 <p className={styles.smallP}>22년 대비 24% 증가</p>
-                <img src='/img/indicators_donation.png' alt='donation' />
+                <img
+                  src={`${import.meta.env.BASE_URL}img/indicators_donation.png`}
+                  alt='donation'
+                />
               </div>
 
               <div className={`${styles.card} ${styles.green}`}>
@@ -328,7 +343,10 @@ function ESGPage() {
                 <p>재생에너지 사용량</p>
                 <strong>4,000 MWh</strong>
                 <p className={styles.smallP}>22년 대비 2배 증가</p>
-                <img src='/img/indicators_energy.png' alt='energy' />
+                <img
+                  src={`${import.meta.env.BASE_URL}img/indicators_energy.png`}
+                  alt='energy'
+                />
               </div>
 
               <div className={`${styles.card} ${styles.pink}`}>
@@ -354,7 +372,7 @@ function ESGPage() {
                 </strong>
                 <p className={styles.smallP}>모두가 누리는 서비스</p>
                 <img
-                  src='/img/indicators_accessibility.png'
+                  src={`${import.meta.env.BASE_URL}img/indicators_accessibility.png`}
                   alt='accessibility'
                 />
               </div>
@@ -367,7 +385,10 @@ function ESGPage() {
                   성과급<strong>15%</strong>
                 </p>
                 <p className={styles.smallP}>ESG 기반 의사결정</p>
-                <img src='/img/indicators_performance.png' alt='performance' />
+                <img
+                  src={`${import.meta.env.BASE_URL}img/indicators_performance.png`}
+                  alt='performance'
+                />
               </div>
 
               <div className={`${styles.card} ${styles.pink}`}>
@@ -375,7 +396,10 @@ function ESGPage() {
                 <p>여성 임원 비율</p>
                 <strong>57.1%</strong>
                 <p className={styles.smallP}>다양성과 포용성</p>
-                <img src='/img/indicators_executives.png' alt='executives' />
+                <img
+                  src={`${import.meta.env.BASE_URL}img/indicators_executives.png`}
+                  alt='executives'
+                />
               </div>
             </div>
 
@@ -427,7 +451,10 @@ function ESGPage() {
 
             {/* 이미지 박스 */}
             <div className={styles.reportImage}>
-              <img src='/img/esgReports.png' alt='2023 ESG 보고서 미리보기' />
+              <img
+                src={`${import.meta.env.BASE_URL}img/esgReports.png`}
+                alt='2023 ESG 보고서 미리보기'
+              />
             </div>
           </div>
 
@@ -447,14 +474,20 @@ function ESGPage() {
           {/* 하단 카드 */}
           <div className={styles.bottomCards}>
             <a className={styles.resourceCard}>
-              <img src='/img/report_archive.png' alt='보고서 아이콘' />
+              <img
+                src={`${import.meta.env.BASE_URL}img/report_archive.png`}
+                alt='보고서 아이콘'
+              />
               <div className={styles.cardText}>
                 <h4>보고서 아카이브</h4>
                 <p>ESG 관련 보고서</p>
               </div>
             </a>
             <a className={styles.resourceCard}>
-              <img src='/img/report_policy.png' alt='정책 아이콘' />
+              <img
+                src={`${import.meta.env.BASE_URL}img/report_policy.png`}
+                alt='정책 아이콘'
+              />
               <div className={styles.cardText}>
                 <h4>정책과 규정</h4>
                 <p>ESG경영 관련 정책</p>
@@ -489,7 +522,7 @@ function ESGPage() {
                   </div>
                   <img
                     className={styles.cardImage}
-                    src='/img/img_fund_digital.png'
+                    src={`${import.meta.env.BASE_URL}img/img_fund_digital.png`}
                     alt='소상공인'
                   />
                 </div>
@@ -509,7 +542,7 @@ function ESGPage() {
                   </div>
                   <img
                     className={styles.cardImage}
-                    src='/img/img_fund_creater.png'
+                    src={`${import.meta.env.BASE_URL}img/img_fund_creater.png`}
                     alt='창작자'
                   />
                 </div>
@@ -529,7 +562,7 @@ function ESGPage() {
                   </div>
                   <img
                     className={styles.cardImage}
-                    src='/img/img_fund_with.png'
+                    src={`${import.meta.env.BASE_URL}img/img_fund_with.png`}
                     alt='같이가치'
                   />
                 </div>
@@ -549,7 +582,7 @@ function ESGPage() {
                   </div>
                   <img
                     className={styles.cardImage}
-                    src='/img/img_fund_farm.png'
+                    src={`${import.meta.env.BASE_URL}img/img_fund_farm.png`}
                     alt='농축수산물'
                   />
                 </div>
@@ -573,7 +606,7 @@ function ESGPage() {
                   </div>
                   <img
                     className={styles.cardImage}
-                    src='/img/img_fund_medic.png'
+                    src={`${import.meta.env.BASE_URL}img/img_fund_medic.png`}
                     alt='모빌리티'
                   />
                 </div>
@@ -592,7 +625,7 @@ function ESGPage() {
                     </div>
                     <img
                       className={styles.cardImage}
-                      src='/img/img_fund_indie.png'
+                      src={`${import.meta.env.BASE_URL}img/img_fund_indie.png`}
                       alt='카카오게임즈'
                     />
                   </div>
@@ -671,7 +704,7 @@ function ESGPage() {
 
         {/* 최근 소식 */}
         <section className={styles.esgNews}>
-          <h5>최근 소식</h5>
+          <h2>최근 소식</h2>
           <ul className={styles.cardBox}>
             <li>
               <Card
@@ -681,8 +714,8 @@ function ESGPage() {
                   tags: ['#공정거래', '#준신위'],
                   date: '2024.08.14',
                   category: 'NEWS',
-                  imgSrc: '../../img/11184.webp',
-                  iconSrc: '../../dummy/loudspeaker.webp',
+                  imgSrc: `${import.meta.env.BASE_URL}img/11184.webp`,
+                  iconSrc: `${import.meta.env.BASE_URL}dummy/loudspeaker.webp`,
                 }}
                 imgPosition='bottom'
               />
@@ -696,8 +729,8 @@ function ESGPage() {
                   tags: ['#ESG', '#새가버치', '#세계환경의날', '#카본인덱...'],
                   date: '2024.06.05',
                   category: 'NEWS',
-                  imgSrc: '../../img/11077.webp',
-                  iconSrc: '../../dummy/loudspeaker.webp',
+                  imgSrc: `${import.meta.env.BASE_URL}img/11077.webp`,
+                  iconSrc: `${import.meta.env.BASE_URL}dummy/loudspeaker.webp`,
                 }}
                 imgPosition='bottom'
               />
@@ -711,8 +744,8 @@ function ESGPage() {
                   tags: ['#카톡설명서', '#디지털접근성', '#세계접근성인...'],
                   date: '2024.05.16',
                   category: 'NEWS',
-                  imgSrc: '../../img/11024.webp',
-                  iconSrc: '../../dummy/loudspeaker.webp',
+                  imgSrc: `${import.meta.env.BASE_URL}img/11024.webp`,
+                  iconSrc: `${import.meta.env.BASE_URL}dummy/loudspeaker.webp`,
                 }}
                 imgPosition='bottom'
               />

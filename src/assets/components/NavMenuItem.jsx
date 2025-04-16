@@ -86,7 +86,10 @@ const NavMenuItem = ({ menu, isOpen, onToggle }) => {
             !menu.categories?.length &&
             menu.items.map((item, idx) => (
               <li key={idx}>
-                <Link to='#' className={styles.link_submenu}>
+                <Link
+                  to={item === 'ESG 보고서' ? '/responsible/esg' : '#'}
+                  className={styles.link_submenu}
+                >
                   {item}
                 </Link>
               </li>

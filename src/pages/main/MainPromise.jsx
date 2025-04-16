@@ -6,7 +6,7 @@ const MainTest = () => {
     <section className={styles.promiseSection}>
       <div className={styles.sectionTitleWrap}>
         <img
-          src='/img/ico_tit_esg.gif'
+          src={`${import.meta.env.BASE_URL}img/ico_tit_esg.gif`}
           alt='하트 아이콘'
           className={styles.heartIcon}
         />
@@ -22,7 +22,7 @@ const MainTest = () => {
             </div>
           </span>
           <img
-            src='/img/mainesg.gif'
+            src={`${import.meta.env.BASE_URL}img/mainesg.gif`}
             alt='ESG illustration'
             className={styles.cardImage}
           />
@@ -47,7 +47,7 @@ const MainTest = () => {
           </span>
 
           <img
-            src='/img/maingreen.gif'
+            src={`${import.meta.env.BASE_URL}img/maingreen.gif`}
             alt='Active green illustration'
             className={styles.cardImage}
           />
@@ -71,7 +71,7 @@ const MainTest = () => {
             </div>
           </span>
           <img
-            src='/img/mainpolicy.gif'
+            src={`${import.meta.env.BASE_URL}img/mainpolicy.gif`}
             alt='Policy magazine illustration'
             className={styles.cardImage}
           />
