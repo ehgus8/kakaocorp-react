@@ -193,3 +193,22 @@ nav {
     padding-left: 24px;
   }
 }
+
+.btnStyle {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border: none;
+  overflow: visible;
+  border-radius: 50%;
+}
+
+.searchIcon {
+  width: 30px;
+  height: 30px;
+  transform: translate(2px, 0px);
+}
+
+.btnStyle:hover {
+  background: #dbdcdaf9;
+}

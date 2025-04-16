@@ -39,43 +39,110 @@ export const MiniCard = ({ articleItem }) => {
 }
 */
 
+// const Card = ({ item, imgPosition = 'top' }) => {
+//   return (
+//     <Link
+//       onClick={() => window.scrollTo(0, 0)}
+//       to={`/detail/${item.id}`}
+//       className={styles.noLinkStyle}
+//       draggable={false}
+//     >
+//       <div className={styles.cardContainer}>
+//         {/* 이미지가 위에 있는 경우 top */}
+//         {imgPosition === 'top' && (
+//           <div className={styles.imageContainer}>
+//             <img src={item.imgSrc} />
+//           </div>
+//         )}
+//         <div className={styles.textContainer}>
+//           <div className={styles.header}>
+//             <img src={item.iconSrc} width='32px' />
+//             <span className={styles.category}>{item.category}</span>
+//             <span>{item.date}</span>
+//           </div>
+//           <div className={styles.title}>
+//             <strong>{item.title}</strong>
+//           </div>
+//           <div className={styles.tags}>
+//             {item.tags.map((tag) => (
+//               <span>{tag} </span>
+//             ))}
+//           </div>
+//         </div>
+//         {/* 이미지가 아래에 있는 경우 bottom */}
+//         {imgPosition === 'bottom' && (
+//           <div className={styles.imageContainer}>
+//             <img src={item.imgSrc} />
+//           </div>
+//         )}
+//       </div>
+//     </Link>
+//   );
+// };
+
+// export default Card;
+
 const Card = ({ item, imgPosition = 'top' }) => {
   return (
-    <Link
-      to={`/detail/${item.id}`}
-      className={styles.noLinkStyle}
-      draggable={false}
-    >
-      <div className={styles.cardContainer}>
-        {/* 이미지가 위에 있는 경우 top */}
-        {imgPosition === 'top' && (
-          <div className={styles.imageContainer}>
-            <img src={item.imgSrc} />
-          </div>
-        )}
-        <div className={styles.textContainer}>
-          <div className={styles.header}>
-            <img src={item.iconSrc} width='32px' />
-            <span className={styles.category}>{item.category}</span>
-            <span>{item.date}</span>
-          </div>
-          <div className={styles.title}>
-            <strong>{item.title}</strong>
-          </div>
-          <div className={styles.tags}>
-            {item.tags.map((tag) => (
-              <span>{tag} </span>
-            ))}
-          </div>
-        </div>
-        {/* 이미지가 아래에 있는 경우 bottom */}
-        {imgPosition === 'bottom' && (
-          <div className={styles.imageContainer}>
-            <img src={item.imgSrc} />
-          </div>
-        )}
+    <div className={styles.wrap_card}>
+      <div className={`${styles.item_card_new} ${styles.item_bottom_card}`}>
+        <Link
+          onClick={() => window.scrollTo(0, 0)}
+          to={`/detail/${item.id}`}
+          className={styles.link_card}
+          draggable='false'
+        >
+          <span className={styles.wrap_cont}>
+            {imgPosition == 'top' && (
+              <span className={styles.wrap_thumb}>
+                <img
+                  src={item.imgSrc}
+                  className={styles.thumb_img}
+                  draggable='false'
+                />
+              </span>
+            )}
+            <div className={styles.wrap_text}>
+              <span className={styles.info_cate}>
+                <img src={item.iconSrc} className={styles.ico_cate} />
+                <span className={styles.txt_cate}>{item.category}</span>
+                <span className={styles.txt_date}>{item.date}</span>
+              </span>
+              <strong className={styles.tit_card}>{item.title}</strong>
+              <span className={styles.info_card}>
+                {item.tags.map((tag) => (
+                  <span className={styles.txt_keyword}>{tag}</span>
+                ))}
+              </span>
+            </div>
+            {imgPosition == 'bottom' && (
+              <span className={styles.wrap_thumb}>
+                <img
+                  src={item.imgSrc}
+                  className={styles.thumb_img}
+                  draggable='false'
+                />
+              </span>
+            )}
+          </span>
+        </Link>
+        <button type='button' className={styles.btn_share}>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 24 24'
+            className={styles.ico_share}
+          >
+            <g fill='none' fill-rule='evenodd'>
+              <g transform='translate(-350 -222) translate(24 192) translate(326 30) translate(10 2)'>
+                <circle cx='2' cy='2' r='1' fill='#000'></circle>
+                <circle cx='2' cy='10' r='1' fill='#000'></circle>
+                <circle cx='2' cy='18' r='1' fill='#000'></circle>
+              </g>
+            </g>
+          </svg>
+        </button>
       </div>
-    </Link>
+    </div>
   );
 };
 

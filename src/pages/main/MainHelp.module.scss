@@ -1,0 +1,400 @@
+/* 🔶 전체 레이아웃 */
+.cardContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  // background: rgb(160, 202, 173);
+  flex-wrap: wrap;
+}
+
+.bottomCardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* 🔸 공통 카드 스타일 */
+.card {
+  width: 270px;
+  aspect-ratio: 2 / 2.3;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  background: #f3f3f3;
+  margin: 15px 0;
+  flex: 1 1 400px; //
+}
+
+/* 🟪 카드 타입별 배경색 */
+.cardType1 {
+  // background-color: #c4c4f7;
+}
+.cardType2 {
+  background-color: #ffe608;
+}
+.cardType3 {
+  background-color: #317be3;
+  color: white;
+}
+
+/* 🔸 공통 텍스트 섹션 */
+.txtSection {
+  padding: 40px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 🖼️ 이미지 영역 */
+.imageSection {
+  height: 200px;
+  width: inherit;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  // position: relative;
+  // margin-top: auto;
+  position: absolute;
+  bottom: 0;
+}
+.imageSection img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  // position: absolute;
+  // bottom: 100px;
+}
+.card2Image img {
+  width: 70%;
+  height: auto;
+}
+
+/* 고객센터 카드들 (왼쪽 세로 카드) */
+.helpCardContainer {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: #fff;
+}
+.helpCard {
+  background: #ececec;
+  border-radius: 12px;
+  display: flex;
+  align-items: stretch;
+  width: inherit;
+  height: 100px;
+  padding: 35px 30px;
+  position: relative;
+  justify-content: space-between;
+}
+
+.twoCardContent {
+  background: #ececec;
+  border-radius: 12px;
+  display: flex;
+  align-items: stretch;
+  width: 470px;
+  height: 168px;
+  padding: 45px 30px;
+  height: inherit;
+  position: relative;
+  justify-content: space-between;
+  flex: 1 1 400px;
+}
+
+.helpCard:hover {
+  cursor: pointer;
+}
+
+/* 가운데 + 오른쪽 카드 내 텍스트 */
+.textBox {
+  position: relative;
+  display: flex;
+  // align-items: flex-end;
+  margin-bottom: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// .twoTtextBox {
+//   display: flex;
+//   flex-direction: column; /* 세로 정렬 */
+//   justify-content: space-between; /* 위 요소와 아래 요소를 양 끝으로 */
+//   height: 100%; /* 부모 높이 기준으로 꽉 차야 space-between이 적용됨 */
+//   position: relative;
+// }
+
+.linkText1 {
+  display: flex;
+  // align-items: center;
+  // top: 15px;
+  position: relative;
+}
+
+.textBox:hover {
+  cursor: pointer;
+}
+.textBox p {
+  // font-weight: inherit;
+  font-size: 25px;
+  font-weight: 400;
+  padding-right: 90px;
+  margin-bottom: 10px;
+}
+.textBox strong {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 2.3rem;
+}
+.textBox span {
+  font-size: 1rem;
+  bottom: -90px;
+  left: 0;
+  position: absolute;
+}
+
+.textBox img {
+  display: block;
+  margin-right: 0;
+}
+
+.subTextBox {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+}
+
+.cardText2 {
+  color: #fff;
+  display: flex;
+  margin: 5px 0;
+}
+
+.cardText2 p {
+  // padding: 5px 0;
+  text-align: center;
+}
+
+.cardText2:hover {
+  cursor: pointer;
+}
+
+.arrowWrapper {
+  margin-left: 10px;
+}
+
+.whiteArrowWrapper {
+  padding-left: 10px;
+  padding-bottom: 50px;
+  top: -5px;
+  left: 65px;
+  position: absolute;
+}
+
+/* 하단 카드 2개 */
+.twoCardContainer {
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: inherit;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+// .cardContainer {
+//   display: flex;
+//   gap: 10px;
+//   justify-content: space-between;
+//   // background: rgb(160, 202, 173);
+//   flex-wrap: wrap;
+// }
+
+.twoCardContent {
+  background: #ececec;
+  border-radius: 12px;
+  display: flex;
+  align-items: stretch;
+  width: 470px;
+  height: 168px;
+  padding: 45px 30px;
+  height: inherit;
+  position: relative;
+  justify-content: space-between;
+  flex: 1 1 400px;
+}
+
+.twoCardContent:hover {
+  cursor: pointer;
+}
+
+.twoTtextBox {
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  justify-content: space-between; /* 위 요소와 아래 요소를 양 끝으로 */
+  height: 100%; /* 부모 높이 기준으로 꽉 차야 space-between이 적용됨 */
+  position: relative;
+}
+
+.twoText1 {
+  font-size: 20px;
+  font-weight: 400;
+  padding-right: 90px;
+  margin-bottom: 10px;
+}
+
+.twoText2 {
+  position: absolute;
+  bottom: 0;
+}
+
+/*  링크 스타일 */
+.linkText2 {
+  display: flex;
+  // align-items: center;
+  // top: 15px;
+  position: relative;
+}
+
+/* 하단 둥근 카드 */
+.bottomCard {
+  border-radius: 100px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 350px;
+  height: 80px;
+  background: #ececec;
+}
+
+.bottomCard:hover {
+  cursor: pointer;
+}
+
+.bottomCard p {
+  text-align: center;
+  margin: 18px 0;
+  padding-right: 18px;
+}
+
+.bottomTextBox {
+  position: relative;
+}
+
+.bottomTextBox p {
+  margin-right: 50px;
+  margin-bottom: 70px;
+
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 2.3rem;
+}
+
+.bottomTextBox span {
+  font-size: 0.8rem;
+  bottom: -50px;
+  left: 0;
+  position: absolute;
+}
+
+.bottomTextBox img {
+  padding-left: 150px;
+}
+
+/* 제목 영역 */
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.title h2 {
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.titleImg {
+  width: 50px;
+  height: 50px;
+  // transform: 0 50;
+}
+
+.helpImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  text-align: right;
+  display: block;
+  margin-right: 0;
+}
+
+/* 버튼 리스트 및 스타일 */
+.buttonList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.buttonIcon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.button {
+  border: none;
+  background: #ffe608;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.svgIcon {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+/* 이미지 정렬 조정용 */
+.imageWrapper {
+  // position: absolute;
+  // left: 200px;
+  // bottom: 25px;
+  // transform: 20 0;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.imgSec {
+  padding-right: 0;
+  text-align: right;
+}
+
+.contentRow {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 세로 가운데 정렬 */
+  // gap: 10px; /* p와 svg 사이 여백 */
+  margin-top: 15px;
+}
+
+// @media screen and (max-width: 200px) {
+//   .cardContainer {
+//     flex-direction: column;
+//     align-items: center;
+//   }
+
+//   .twoCardContainer {
+//     flex-direction: column;
+//     align-items: center;
+//   }
+// }

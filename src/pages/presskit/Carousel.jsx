@@ -13,10 +13,24 @@ const Carousel = ({ items }) => {
   const settings = {
     infinite: true,
     centerMode: true,
-    centerPadding: '30px',
+    centerPadding: '0px',
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1439,
+        settings: {
+          centerPadding: '150px',
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          centerPadding: '280px',
+        },
+      },
+    ],
   };
   return (
     <div className='carousel-container'>
