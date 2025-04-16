@@ -41,6 +41,7 @@ const MainHelp = () => {
                           stroke='none'
                         />
                         <path
+                          // transform='0 -10'
                           d='M9 15L15 9M15 9H10M15 9V14'
                           stroke='white'
                           strokeWidth='2'
@@ -300,38 +301,31 @@ const MainHelp = () => {
           >
             <div className={styles.twoTextBox}>
               <div className={styles.twoText1}>
-                <p className={styles.twoText1}>투자정보</p>
+                <p>투자정보</p>
               </div>
-              <div className={styles.twoText2}>
-                <span className={styles.linkText2}>
-                  바로가기
-                  <div className={styles.arrowWrapper}>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='40'
-                      height='40'
-                      viewBox='0 0 24 24'
-                      fill='none'
-                      className={styles.svgIcon}
-                    >
-                      <circle
-                        cx='12'
-                        cy='12'
-                        r='12'
-                        fill='black'
-                        stroke='none'
-                      />
-                      <path
-                        d='M9 15L15 9M15 9H10M15 9V14'
-                        stroke='white'
-                        strokeWidth='2'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                      />
-                    </svg>
-                  </div>
-                </span>
-              </div>
+
+              <span className={styles.linkText}>
+                바로가기
+                <div className={styles.arrowWrapper}>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='40'
+                    height='40'
+                    viewBox='0 0 24 24'
+                    fill='none'
+                    className={styles.svgIcon}
+                  >
+                    <circle cx='12' cy='12' r='12' fill='black' stroke='none' />
+                    <path
+                      d='M9 15L15 9M15 9H10M15 9V14'
+                      stroke='white'
+                      strokeWidth='2'
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                    />
+                  </svg>
+                </div>
+              </span>
             </div>
             <div className={styles.imageWrapper}>
               <img src='/mainHelp/img.webp' className={styles.titleImg} />
@@ -345,41 +339,33 @@ const MainHelp = () => {
             }
           >
             <div className={styles.twoTextBox}>
-              <div className={styles.twoText1}>
-                <p className={styles.twoText1}>
-                  데이터의 연결과 보호의 균형을 위한 <br /> 카카오의 노력
-                </p>
-              </div>
-              <div className={styles.twoText2}>
-                <span className={styles.linkText2}>
-                  바로가기
-                  <div className={styles.arrowWrapper}>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='40'
-                      height='40'
-                      viewBox='0 0 24 24'
-                      fill='none'
-                      className={styles.svgIcon}
-                    >
-                      <circle
-                        cx='12'
-                        cy='12'
-                        r='12'
-                        fill='black'
-                        stroke='none'
-                      />
-                      <path
-                        d='M9 15L15 9M15 9H10M15 9V14'
-                        stroke='white'
-                        strokeWidth='2'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                      />
-                    </svg>
-                  </div>
-                </span>
-              </div>
+              <p className={styles.twoText1}>
+                데이터의 연결과 보호의 균형을 위한 <br /> 카카오의 노력
+              </p>
+            </div>
+            <div className={styles.twoText2}>
+              <span>
+                바로가기
+                <div className={styles.arrowWrapper}>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='40'
+                    height='40'
+                    viewBox='0 0 24 24'
+                    fill='none'
+                    className={styles.svgIcon}
+                  >
+                    <circle cx='12' cy='12' r='12' fill='black' stroke='none' />
+                    <path
+                      d='M9 15L15 9M15 9H10M15 9V14'
+                      stroke='white'
+                      strokeWidth='2'
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                    />
+                  </svg>
+                </div>
+              </span>
             </div>
             <div className={styles.imageWrapper}>
               <img src='/mainHelp/img2.webp' className={styles.titleImg} />

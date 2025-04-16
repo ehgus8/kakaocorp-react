@@ -40,7 +40,7 @@
   color: white;
 }
 
-/* 🔸 공통 텍스트 섹션 */
+/* 공통 텍스트 섹션 */
 .txtSection {
   padding: 40px 40px;
   display: flex;
@@ -120,6 +120,7 @@
   margin-bottom: 10px;
   flex-direction: column;
   justify-content: space-between;
+  height: 50px;
 }
 
 // .twoTtextBox {
@@ -130,10 +131,15 @@
 //   position: relative;
 // }
 
-.linkText1 {
+.linkText {
+  //***********************
   display: flex;
-  // align-items: center;
-  // top: 15px;
+  align-items: center;
+  top: 15px;
+  position: relative;
+}
+
+.linkText span {
   position: relative;
 }
 
@@ -167,7 +173,7 @@
 .subTextBox {
   font-size: 18px;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin: 30px 0;
   position: relative;
   display: flex;
 }
@@ -188,7 +194,10 @@
 }
 
 .arrowWrapper {
+  //************************
   margin-left: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .whiteArrowWrapper {
@@ -237,9 +246,9 @@
 
 .twoTtextBox {
   display: flex;
-  flex-direction: column; /* 세로 정렬 */
-  justify-content: space-between; /* 위 요소와 아래 요소를 양 끝으로 */
-  height: 100%; /* 부모 높이 기준으로 꽉 차야 space-between이 적용됨 */
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   position: relative;
 }
 
@@ -251,8 +260,18 @@
 }
 
 .twoText2 {
+  //**********************************
   position: absolute;
-  bottom: 0;
+  bottom: 42px;
+  display: flex;
+}
+
+.twoText2 span {
+  display: flex;
+  display: flex;
+  align-items: center;
+  top: 15px;
+  position: relative;
 }
 
 /*  링크 스타일 */
@@ -385,6 +404,10 @@
   align-items: center; /* 세로 가운데 정렬 */
   // gap: 10px; /* p와 svg 사이 여백 */
   margin-top: 15px;
+}
+
+.contentRow p {
+  font-size: 20px;
 }
 
 // @media screen and (max-width: 200px) {
