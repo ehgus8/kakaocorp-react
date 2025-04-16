@@ -29,7 +29,7 @@
     padding: 32px;
     box-sizing: border-box;
     line-height: 1.2rem;
-
+    position: relative;
     display: flex;
     flex-direction: column;
   }
@@ -48,12 +48,16 @@
 }
 
 .tags {
-  font-size: 1em;
-  margin-top: auto;
+  font-size: 0.8em;
+  // margin-top: 35px;
   white-space: nowrap; /* 줄바꿈 금지 */
   overflow: hidden; /* 넘치는 부분 숨김 */
   text-overflow: ellipsis;
+  bottom: 10px;
+  position: absolute;
+  // display: block;
   // margin-bottom: 10px;
+  width: 240px;
 }
 
 @media (max-width: 1440px) {
@@ -69,11 +73,11 @@
     height: 400px;
   }
   .title strong {
-    margin-top: 12px;
+    // margin-top: 12px;
   }
-  .tags {
-    font-size: 0.8em;
-  }
+  // .tags {
+  //   font-size: 0.8em;
+  // }
 }
 
 .minicardContainer {
