@@ -339,15 +339,15 @@
   margin-bottom: 10px;
 }
 .titleImg {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   // transform: 0 50;
 }
 
 .helpImg {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
   text-align: right;
   display: block;
   margin-right: 0;
@@ -388,11 +388,11 @@
   // left: 200px;
   // bottom: 25px;
   // transform: 20 0;
-
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
+
 .imgSec {
   padding-right: 0;
   text-align: right;
