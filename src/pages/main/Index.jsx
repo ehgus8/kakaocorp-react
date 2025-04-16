@@ -95,7 +95,10 @@ const Index = () => {
       <img className={styles.s_img} src='/main/visual/visual3.webp' alt='' />
       <p>카카오그룹</p>
     </div>,
-    <div className={styles.slide_wrap} key='slide2'>
+    <div
+      className={`${styles.slide_wrap} ${styles.slideItem3_slide}`}
+      key='slide2'
+    >
       <img src='/main/visual/visual5.webp' alt='' />
       <p>연혁</p>
     </div>,

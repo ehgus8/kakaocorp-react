@@ -44,6 +44,7 @@
                 width: 100%;
                 border: 1px solid black;
                 display: block;
+                object-fit: cover;
               }
 
               &:after {
@@ -292,7 +293,7 @@
                     background: url('/main/visual/visual4.svg');
                   }
 
-                  &:last-child {
+                  &.slideItem3_slide {
                     background: #f3f3f3;
 
                     p {
