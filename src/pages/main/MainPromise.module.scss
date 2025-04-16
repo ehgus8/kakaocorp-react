@@ -1,6 +1,7 @@
 .promiseSection {
   padding: 80px 20px;
   background-color: #fff;
+  max-width: 1712px;
 }
 
 .sectionTitleWrap {
@@ -26,12 +27,13 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .promiseCard {
   position: relative;
-  width: 300px;
+  width: calc(33.33% - 16px);
+  height: 670px;
   background-color: #e6f4ff;
   border-radius: 20px;
   display: flex;
@@ -40,6 +42,10 @@
 
   &:nth-child(1) {
     background-color: #89dcff;
+
+    img {
+      width: 100%;
+    }
   }
 
   &:nth-child(2) {
@@ -62,8 +68,7 @@
   top: 0;
   right: 0;
   padding: 2px 2px 16px 16px;
-  border-top-right-radius: 16px;
-  border-bottom-left-radius: 16px;
+  border-radius: 0 0 0 36px;
   background: #fff;
   z-index: 2;
   display: inline-block;
@@ -91,11 +96,14 @@
   }
 
   .cardLabelText {
-    padding: 10px 20px;
-    font-size: 14px;
+    font-size: 17px;
     letter-spacing: -1px;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 29px;
+    line-height: 58px;
+    width: 272px;
+    height: 58px;
+    margin: 2px 2px 0 0;
 
     &.labelBlue {
       background-color: #c2e7ff;
@@ -112,10 +120,13 @@
 }
 
 .cardImage {
-  width: 220px;
-  height: 300px;
+  width: 322px;
   object-fit: contain;
+  position: relative;
   padding: 32px 40px 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .cardText {
@@ -132,16 +143,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  bottom: 0;
-  right: 0;
-  padding: 8px 0 0 8px;
-  border-top-left-radius: 16px;
+  bottom: -2px;
+  right: -2px;
+  padding: 16px 0 0 16px;
+  border-top-left-radius: 36px;
 
   &::after {
     content: '';
     position: absolute;
-    bottom: 46px;
-    right: -2px;
+    top: -24px;
+    right: 0px;
     width: 26px;
     height: 26px;
     background: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNiAyNic+PHBhdGggZD0nTTI0IDBjMCAxMy4zLTEwLjcgMjQtMjQgMjR2MmgyNlYwaC0yeicgZmlsbD0nI2ZmZicgZmlsbC1ydWxlPSdldmVub2RkJyBjbGlwLXJ1bGU9J2V2ZW5vZGQnLz48L3N2Zz4=');
@@ -150,8 +161,8 @@
   &::before {
     content: '';
     position: absolute;
-    right: 46px;
-    bottom: -2px;
+    left: -24px;
+    bottom: 0px;
     width: 26px;
     height: 26px;
     background: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNiAyNic+PHBhdGggZD0nTTI0IDBjMCAxMy4zLTEwLjcgMjQtMjQgMjR2MmgyNlYwaC0yeicgZmlsbD0nI2ZmZicgZmlsbC1ydWxlPSdldmVub2RkJyBjbGlwLXJ1bGU9J2V2ZW5vZGQnLz48L3N2Zz4=');
@@ -159,10 +170,8 @@
 }
 .arrowButton {
   position: relative;
-  right: 0px;
-  bottom: 0px;
-  width: 40px;
-  height: 40px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   font-size: 20px;
   display: flex;
@@ -172,6 +181,7 @@
   justify-content: center;
   transition: background-color 0.2s ease;
   cursor: pointer;
+  margin: 0 2px 2px 0;
 
   &:hover {
     background-color: #444;
