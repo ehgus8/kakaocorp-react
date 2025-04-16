@@ -28,8 +28,8 @@ const ListItem = ({ item }) => {
 const RecommendationSection = ({ firstItem, secondItem }) => {
   return (
     <div>
-      <MiniCard articleItem={firstItem} />
-      <MiniCard articleItem={secondItem} />
+      <MiniCard item={firstItem} />
+      <MiniCard item={secondItem} />
     </div>
   );
 };
@@ -66,28 +66,34 @@ const NewsList = ({ articleList }) => {
       </div>
 
       <div className={styles.wrap_menu}>
-        <PressSlick
-          // styles={{ width: '100%', margin: '0 auto' }}
-          items={[
-            <RecommendationSection
-              firstItem={articleList[0]}
-              secondItem={articleList[1]}
-            />,
-            <RecommendationSection
-              firstItem={articleList[2]}
-              secondItem={articleList[3]}
-            />,
-            <RecommendationSection
-              firstItem={articleList[4]}
-              secondItem={articleList[5]}
-            />,
-            <RecommendationSection
-              firstItem={articleList[6]}
-              secondItem={articleList[7]}
-            />,
-          ]}
-          settings={settings}
-        />
+        <div className={styles.inner_menu}>
+          <div className='cont_link'>
+            <PressSlick
+              styles={{ width: '297px', margin: '0 auto' }}
+              // styles={{}}
+              items={[
+                <RecommendationSection
+                  firstItem={articleList[0]}
+                  secondItem={articleList[1]}
+                />,
+                <RecommendationSection
+                  firstItem={articleList[2]}
+                  secondItem={articleList[3]}
+                />,
+                <RecommendationSection
+                  firstItem={articleList[4]}
+                  secondItem={articleList[5]}
+                />,
+                <RecommendationSection
+                  firstItem={articleList[6]}
+                  secondItem={articleList[7]}
+                />,
+              ]}
+              settings={settings}
+            />
+          </div>
+          <div className='cont_tag'></div>
+        </div>
       </div>
     </div>
   );
