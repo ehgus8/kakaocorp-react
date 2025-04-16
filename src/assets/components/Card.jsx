@@ -2,29 +2,6 @@ import React from 'react';
 import styles from './Card.module.scss';
 import { Link } from 'react-router-dom';
 
-// export const MiniCard = ({ articleItem }) => {
-//   return (
-//     <Link
-//       to={`/detail/${articleItem.id}`}
-//       className={styles.noLinkStyle}
-//       draggable={false}
-//     >
-//       <div className={styles.minicardContainer}>
-//         <div className={styles.textContainer}>
-//           <div className={styles.header}>
-//             <img src='../../dummy/loudspeaker.webp' width='24px' />
-//             <span>보도자료</span>
-//             <span>{articleItem.date}</span>
-//           </div>
-//           <div className='title'>
-//             <strong>{articleItem.title}</strong>
-//           </div>
-//         </div>
-//       </div>
-//     </Link>
-//   );
-// };
-
 export const MiniCard = ({ item }) => {
   return (
     <Link

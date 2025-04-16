@@ -32,7 +32,7 @@
   .wrap_thumb {
     position: relative;
     display: block;
-    height: 354px !important;
+    height: 354px;
 
     .thumb_img {
       position: absolute;
@@ -145,7 +145,7 @@
   .item_bottom_card {
     border-radius: 16px;
     .wrap_thumb {
-      height: 260px !important;
+      height: 260px;
     }
     .wrap_text {
       padding: 32px;
@@ -200,7 +200,7 @@
   }
   .item_bottom_card {
     .wrap_thumb {
-      height: 190px !important;
+      height: 190px;
     }
     .wrap_text {
       padding: 24px;
@@ -259,6 +259,7 @@
   border-radius: 16px;
   background-color: #f3f3f3;
   box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 .inner_info {
