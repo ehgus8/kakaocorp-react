@@ -4,22 +4,14 @@ import DropDown from './DropDown.jsx';
 import Card from '../esg/CardCustom.jsx';
 import styles2 from '../esg/CardCustom.module.scss';
 
-{
-  /* <div class="content-feature" style="display: none;"><div class="inner_path" ><div class="wrap_tit" ><img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/65fde7b2017900001.png?type=thumb&amp;opt=C72x72.fwebp"> <strong class="tit_path">ESG</strong></div> <!----> <div class="wrap_download"><button  type="button" aria-expanded="false" class="btn_download"><span  class="txt_download_esg">
-          2023 ESG 보고서
-        </span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="ico_download_circle"><g  fill="none" fill-rule="evenodd"><g  transform="translate(-1352 -29) translate(1291 24) translate(61 5)"><circle  cx="8" cy="8" r="8"></circle> <g class="stroke"><path stroke-width="1.286" d="M2 2L8 2 8 8" transform="translate(3 3) rotate(135 5 5)"></path> <path  stroke-width="1.5" d="M5 9L5 0" transform="translate(3 3)"></path></g></g></g></svg></button> <!----></div></div></div> */
-}
-
 function ESGPage() {
   /* 헤더 스크롤 이벤트 */
-  const [scrollY, setScrollY] = useState(0);
   const [isShrunkHeaderVisible, setShrunkHeaderVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
-      setShrunkHeaderVisible(currentY > 300); // 300px 이상일 때만 작아진 헤더 보이게
-      setScrollY(currentY);
+      setShrunkHeaderVisible(currentY > 300);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -35,7 +27,7 @@ function ESGPage() {
 
   const allCards = [
     {
-      img: '/img/card_energy.png',
+      img: `${import.meta.env.BASE_URL}/img/card_energy.png`,
       title: '22년 대비\n재생에너지 2배 확대',
       desc: '제주에서 바람으로\n판교에서 태양으로',
     },
@@ -155,8 +147,7 @@ function ESGPage() {
               <img src='/img/ico_tit_esg.gif' alt='ESG' />
               <span>ESG</span>
             </div>
-            <DropDown small />{' '}
-            {/* DropDown.jsx에서 small props에 따라 스타일 분기 */}
+            <DropDown small />
           </div>
         )}
 
