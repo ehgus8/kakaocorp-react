@@ -55,17 +55,39 @@ chore: ESLint 설정 파일 추가
 
 ### 🔸 클론할 페이지
 
-1. **메인 페이지**
+1. **메인 페이지 (https://www.kakaocorp.com/)**
+   <details>
+      <summary>이미지 보기</summary>
+
    ![메인페이지](./images/mainPage.png)
+   </details>
 
 2. **ESG 보고서 페이지 (https://www.kakaocorp.com/page/responsible/esg)**
-   ![ESG페이지](./images/esgPage.png)
+   <details>
+      <summary>이미지 보기</summary>
+      ![ESG페이지](./images/esgPage.png)
+   </details>
+
 3. **보도자료 페이지 (https://www.kakaocorp.com/page/presskit/press-release)**
+   <details>
+      <summary>이미지 보기</summary>
+
    ![보도자료페이지](./images/pressPage.png)
-   **3-1. 상세 페이지**
+   </details>
+   3-1. 상세 페이지
+   <details>
+      <summary>이미지 보기</summary>
+
    ![상세페이지](./images/detailPage.png)
+   </details>
+
 4. **검색 페이지 (https://www.kakaocorp.com/page/?searchKeyword=%EC%B9%B4%EC%B9%B4%EC%98%A4&searchPage=1)**
+
+   <details>
+      <summary>이미지 보기</summary>
+
    ![검색페이지](./images/searchPage.png)
+   </details>
 
 ### 🔸 프로젝트 목표
 
