@@ -95,14 +95,18 @@ const Index = () => {
 
   const slideItems3 = [
     <div className={styles.slide_wrap} key='slide1'>
-      <img className={styles.s_img} src='/main/visual/visual3.webp' alt='' />
+      <img
+        className={styles.s_img}
+        src={`${import.meta.env.BASE_URL}main/visual/visual3.webp`}
+        alt=''
+      />
       <p>카카오그룹</p>
     </div>,
     <div
       className={`${styles.slide_wrap} ${styles.slideItem3_slide}`}
       key='slide2'
     >
-      <img src='/main/visual/visual5.webp' alt='' />
+      <img src={`${import.meta.env.BASE_URL}main/visual/visual5.webp`} alt='' />
       <p>연혁</p>
     </div>,
   ];
@@ -140,7 +144,10 @@ const Index = () => {
                 </div>
                 <div className={styles.inner_top}>
                   <Link to={'https://www.kakaocorp.com/page/collection'}>
-                    <img src='/main/visual/visual1.gif' alt='visual1' />
+                    <img
+                      src={`${import.meta.env.BASE_URL}main/visual/visual1.gif`}
+                      alt='visual1'
+                    />
                   </Link>
                 </div>
                 <div className={styles.inner_text}>
@@ -217,7 +224,6 @@ const Index = () => {
                       <style>{`
                         .slick-arrow {
                           width:32px;height:32px;z-index:100;
-
                           &.slick-next{right:22px;}
                           &.slick-prev{left:10px;}
                         }`}</style>
