@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './DropDown.module.scss';
 
-function DropDown() {
+function DropDown({ small }) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -19,15 +19,23 @@ function DropDown() {
 
   return (
     <div className={styles.dropdown} ref={dropdownRef}>
-      <button className={styles.button} onClick={() => setIsOpen(!isOpen)}>
-        2023 ESG 보고서 <span className={styles.arrow}>↓</span>
+      <button
+        className={`${styles.downloadButton} ${small ? styles.small : ''}`}
+      >
+        2023 ESG 보고서 ↓
       </button>
 
       {isOpen && (
         <div className={styles.menu}>
-          <a href="/report/2023_kr.pdf" target="_blank" rel="noreferrer">국문 보고서</a>
-          <a href="/report/2023_en.pdf" target="_blank" rel="noreferrer">영문 보고서</a>
-          <a href="/report/2023_daisy.zip" target="_blank" rel="noreferrer">시각장애인용</a>
+          <a href='/report/2023_kr.pdf' target='_blank' rel='noreferrer'>
+            국문 보고서
+          </a>
+          <a href='/report/2023_en.pdf' target='_blank' rel='noreferrer'>
+            영문 보고서
+          </a>
+          <a href='/report/2023_daisy.zip' target='_blank' rel='noreferrer'>
+            시각장애인용
+          </a>
         </div>
       )}
     </div>
