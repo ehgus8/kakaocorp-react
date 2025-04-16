@@ -6,8 +6,8 @@ const dummyArticleList = [
     tags: ['#프로젝트단골', '#oecd', '#상생사례', '#디지털전환', '#소상공인'],
     date: '2025.04.11',
     category: '보도자료',
-    imgSrc: '../../dummy/11517.webp',
-    iconSrc: '../../dummy/loudspeaker.webp',
+    imgSrc: `${import.meta.env.BASE_URL}dummy/11517.webp`,
+    iconSrc: `${import.meta.env.BASE_URL}dummy/loudspeaker.webp`,
     content: `- 카카오, 아시아 유일 민간 협력사로 ‘D4SME’ 정례 회의 참석… 소상공인 디지털 전환 지원 사례 소개
   - 북촌 계동길 상인회장이 발표 참여해 현장 경험 전달, “골목상권의 디지털 전환 계기”`,
   },
@@ -17,8 +17,8 @@ const dummyArticleList = [
     tags: ['#IP', '#라이언&춘식', '#카카오프렌즈', '#캐릭터'],
     date: '2025.04.09',
     category: '보도자료',
-    imgSrc: '../../dummy/11516.webp',
-    iconSrc: '../../dummy/loudspeaker.webp',
+    imgSrc: `${import.meta.env.BASE_URL}dummy/11516.webp`,
+    iconSrc: `${import.meta.env.BASE_URL}dummy/loudspeaker.webp`,
     content: `- 라이언과 춘식이 캐릭터 활용한 벚꽃 맞이 이벤트 진행 …. 9일부터 약 한 달간 운영
   - 초대형 라이언·춘식이 애드벌룬, 친환경 굿즈 패키지 등 다양한 볼거리 제공
   - ‘라춘 복 배달 in 도산공원’ 에 이어 양재천으로 확대… 계절마다 새로운 공간에서 팬 접점 확대`,
@@ -35,8 +35,8 @@ const dummyArticleList = [
     ],
     date: '2025.04.08',
     category: '보도자료',
-    imgSrc: '../../dummy/11515.webp',
-    iconSrc: '../../dummy/loudspeaker.webp',
+    imgSrc: `${import.meta.env.BASE_URL}dummy/11515.webp`,
+    iconSrc: `${import.meta.env.BASE_URL}dummy/loudspeaker.webp`,
     content: `- 2016년 첫선을 보인 지 9년 만에 누적 거래액 1조 원 달성… 가파른 속도로 거래액 증가
   - 카카오메이커스 공동 주문에 303만 명 참여, 제가버치에서는 7천 톤의 농축수산물 거래
   - 이용자들의 착한 소비 유도, 환경과 사회 전반에 긍정적 변화 주는 ‘임팩트 커머스’로 자리매김`,
@@ -54,8 +54,8 @@ const dummyArticleList = [
     ],
     date: '2025.03.28',
     category: '보도자료',
-    imgSrc: '../../dummy/11512.webp',
-    iconSrc: '../../dummy/loudspeaker.webp',
+    imgSrc: `${import.meta.env.BASE_URL}dummy/11512.webp`,
+    iconSrc: `${import.meta.env.BASE_URL}dummy/loudspeaker.webp`,
     content: `- 선물하기, 매년 ‘착한 거짓말’을 주제로 따뜻한 마음 전해
   - 선물하기에 ‘만약 약국’ 오픈.. 마음작가로 변신한 환아들의 ‘만약’ 처방전 공개
   - 마음작가들의 그림으로 선물하기 홈 화면 단장하고, 선물하기 추천 선물 선봬
@@ -69,8 +69,8 @@ const dummyArticleList = [
     tags: ['#카카오같이가치', '#산불피해기부'],
     date: '2025.03.27',
     category: '보도자료',
-    imgSrc: '../../dummy/11511.webp',
-    iconSrc: '../../dummy/loudspeaker.webp',
+    imgSrc: `${import.meta.env.BASE_URL}dummy/11511.webp`,
+    iconSrc: `${import.meta.env.BASE_URL}dummy/loudspeaker.webp`,
     content: `- 23일부터 카카오같이가치서 모금 진행, 이용자 120만 명 동참하며 50억 이상 모금액 조성
   - 응원 댓글 1건마다 카카오가 1천 원 기부… 현재까지 5억 원 기부, 총 10억 기부 예정`,
   },
@@ -80,8 +80,8 @@ const dummyArticleList = [
     tags: ['#카카오톡 선물하기', '#만약약국', '#민들레마음'],
     date: '2025.03.26',
     category: '보도자료',
-    imgSrc: '../../dummy/11510.webp',
-    iconSrc: '../../dummy/loudspeaker.webp',
+    imgSrc: `${import.meta.env.BASE_URL}dummy/11510.webp`,
+    iconSrc: `${import.meta.env.BASE_URL}dummy/loudspeaker.webp`,
     content: `- 신종환 CFO, 신규 사내이사 선임
   - 김선욱 법무법인 세승 변호사, 사외이사 및 감사위원 신규 선임
   [2025-03-26] 카카오가 제30기 정기 주주총회 후 열린 이사회에서 함춘승 피에이치앤컴퍼니 사장을 신규이사회 의장으로 선임했다.`,
@@ -93,8 +93,8 @@ const dummyArticleList = [
     tags: ['#성과공유회', '#카카오임팩트', '#테크포임팩트'],
     date: '2025.03.24',
     category: '보도자료',
-    imgSrc: '../../dummy/11507.webp',
-    iconSrc: '../../dummy/loudspeaker.webp',
+    imgSrc: `${import.meta.env.BASE_URL}dummy/11507.webp`,
+    iconSrc: `${import.meta.env.BASE_URL}dummy/loudspeaker.webp`,
     content: `- 21일 카카오 판교아지트에서 성과공유회 열고 5개월간 개발한 7개 기술 솔루션 발표
   
   - 저사양 기기용 백내장 진단 AI앱, 쉬운 글 AI 번안 서비스 등 올 상반기 기술 상용화 눈앞
@@ -108,8 +108,8 @@ const dummyArticleList = [
     tags: ['#콘텐츠CIC', '#다음뉴스', '#포털 다음', '#입점프로세스'],
     date: '2025.03.24',
     category: '보도자료',
-    imgSrc: '../../dummy/11508.webp',
-    iconSrc: '../../dummy/loudspeaker.webp',
+    imgSrc: `${import.meta.env.BASE_URL}dummy/11508.webp`,
+    iconSrc: `${import.meta.env.BASE_URL}dummy/loudspeaker.webp`,
     content: `- 지역 카테고리 대상 첫 입점 프로세스 진행 … 입점 신청한 언론사 중 63% 입점
   
   - 4월 중 다음뉴스에 ‘지역 뉴스’ 공급 … 다채롭고 심도 있는 지역 뉴스 제공
@@ -122,8 +122,8 @@ const dummyArticleList = [
     tags: ['#콘텐츠CIC', '#다음스포츠', '#야구게임센터', '#프로야구', '#다음'],
     date: '2025.03.21',
     category: '보도자료',
-    imgSrc: '../../dummy/11506.webp',
-    iconSrc: '../../dummy/loudspeaker.webp',
+    imgSrc: `${import.meta.env.BASE_URL}dummy/11506.webp`,
+    iconSrc: `${import.meta.env.BASE_URL}dummy/loudspeaker.webp`,
     content: `- 그래픽 중계, 필드뷰, 득점 문자 중계 고도화로 경기 중계 서비스 강화
   
   - 다양한 기록 제공부터 경기 종료 후 AI 경기 요약까지 … 다채로운 정보 확인 가능
@@ -136,8 +136,8 @@ const dummyArticleList = [
     tags: ['#마음날씨', '#사회공헌', '#카카오같이가치'],
     date: '2025.03.20',
     category: '보도자료',
-    imgSrc: '../../dummy/11505.webp',
-    iconSrc: '../../dummy/loudspeaker.webp',
+    imgSrc: `${import.meta.env.BASE_URL}dummy/11505.webp`,
+    iconSrc: `${import.meta.env.BASE_URL}dummy/loudspeaker.webp`,
     content: `- 카카오같이가치 BIG5 성격검사 개편, 한층 사용자 친화적인 테스트로 거듭   
   
   - UI/UX 변화로 사용성 개선하고 카카오프렌즈 쬬르디 30종 캐릭터로 결과 이해도 높여 
@@ -150,8 +150,8 @@ const dummyArticleList = [
     tags: ['#이노베이션 윈도우', '#정신아', '#카카오', '#카카오톡'],
     date: '2025.03.19',
     category: '보도자료',
-    imgSrc: '../../dummy/11502.webp',
-    iconSrc: '../../dummy/loudspeaker.webp',
+    imgSrc: `${import.meta.env.BASE_URL}dummy/11502.webp`,
+    iconSrc: `${import.meta.env.BASE_URL}dummy/loudspeaker.webp`,
     content: `- ‘End to And’ 슬로건 아래 모바일 혁명 잇는 AI 시대 전략 방향 제시
   
   - 정신아 의장 “새로 열린 AI 이노베이션 윈도우 놓쳐선 안 돼”
@@ -164,8 +164,8 @@ const dummyArticleList = [
     tags: ['#카카오 톡딜', '#소상공인 지원', '#TOPS 사업 참여'],
     date: '2025.03.19',
     category: '보도자료',
-    imgSrc: '../../dummy/11503.webp',
-    iconSrc: '../../dummy/loudspeaker.webp',
+    imgSrc: `${import.meta.env.BASE_URL}dummy/11503.webp`,
+    iconSrc: `${import.meta.env.BASE_URL}dummy/loudspeaker.webp`,
     content: `- 중기부∙한유원 주관  경쟁력 있는 소상공인 육성하는 TOPS 사업 참여 
   
   - 카카오 톡딜 운영 식품 브랜드 200개사 선정, 성장 지원을 비롯해 다양한  혜택 제공`,
@@ -176,8 +176,8 @@ const dummyArticleList = [
     tags: ['#카카오프렌즈', '#캐릭터', '#라이언', '#웹툰'],
     date: '2025.03.18',
     category: '보도자료',
-    imgSrc: '../../dummy/11501.webp',
-    iconSrc: '../../dummy/loudspeaker.webp',
+    imgSrc: `${import.meta.env.BASE_URL}dummy/11501.webp`,
+    iconSrc: `${import.meta.env.BASE_URL}dummy/loudspeaker.webp`,
     content: `- 베일에 싸여 있던 둥둥섬과 라이언의 어린 시절 이야기 담은 첫 오리지널 웹툰
   
   - 18일부터 카카오페이지·카카오웹툰 및 글로벌 플랫폼 동시 공개
