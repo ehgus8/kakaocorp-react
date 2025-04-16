@@ -42,7 +42,7 @@ const SearchInput = ({
       </form>
     </div>
     <img
-      src='/img/searchIcon.png'
+      src={`${import.meta.env.BASE_URL}/img/searchIcon.png`}
       className={styles.characterImage}
       alt='검색 아이콘'
     />
