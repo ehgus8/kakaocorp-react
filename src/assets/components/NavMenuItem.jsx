@@ -71,7 +71,10 @@ const NavMenuItem = ({ menu, isOpen, onToggle }) => {
                 <em>{cat.label}</em>
                 {cat.items.map((item, i) => (
                   <li key={i}>
-                    <Link to='#' className={styles.link_submenu}>
+                    <Link
+                      to={item === '보도자료' ? '/presskit' : '#'}
+                      className={styles.link_submenu}
+                    >
                       {item}
                     </Link>
                   </li>
