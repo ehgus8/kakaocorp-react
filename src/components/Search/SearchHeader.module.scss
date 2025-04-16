@@ -1,0 +1,29 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: white;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 20%;
+  z-index: 10000;
+  margin: 0 2%;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.closeButton {
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  right: 1rem;
+}

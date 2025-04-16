@@ -1,0 +1,79 @@
+.searchContainer {
+  position: fixed;
+  margin: 1rem 0;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  //   background: bisque;
+  //   min-height: 500px;
+  max-width: 600px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-bottom: 50px;
+}
+
+.chatBubble {
+  position: relative;
+  display: flex;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  align-items: center;
+  background: #333;
+  border-radius: 20px;
+  padding: 0.2rem 1.5rem;
+  color: white;
+  width: 600px;
+  max-width: 90%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  overflow: visible;
+}
+
+/* 말풍선 꼬리 */
+.chatBubble::after {
+  content: '';
+  position: absolute;
+  bottom: 13%;
+  right: -3px;
+  width: 20px;
+  height: 20px;
+  background: #333;
+  border-bottom-left-radius: 100%;
+  transform: rotate(50deg);
+  //z-index: 1; /* 꼬리를 말풍선 위에 보이게 */
+}
+
+.searchIcon {
+  width: 24px; /* 원하는 크기로 조정 */
+  height: 24px; /* 원하는 크기로 조정 */
+  color: #fff; /* 아이콘 색상 */
+  padding-top: 3px;
+}
+
+.searchInput {
+  background: transparent;
+  width: 400px;
+  padding: 0.75rem 0.2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+  margin-left: 0.8rem;
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: white;
+  opacity: 1; /* 일부 브라우저에서 기본 흐리게 처리되는 걸 방지 */
+}
+
+.characterImage {
+  position: absolute;
+  right: -120px;
+  top: -10px;
+  width: 120px;
+}

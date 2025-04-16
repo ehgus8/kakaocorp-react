@@ -28,8 +28,14 @@ const RootLayout = () => {
   const [searchIsShown, setSearchIsShown] = useState(false);
 
   // 모달을 열고 닫아 주는 핸들러
-  const showSearchHandler = () => setSearchIsShown(true);
-  const hideSearchHandler = () => setSearchIsShown(false);
+  const showSearchHandler = () => {
+    setSearchIsShown(true);
+    document.body.style.paddingTop = '20%';
+  };
+  const hideSearchHandler = () => {
+    setSearchIsShown(false);
+    document.body.style.paddingTop = '0';
+  };
 
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
@@ -45,7 +51,11 @@ const RootLayout = () => {
         className={`${styles['doc-header']} ${isScrolled ? styles.scroll : ''} ${isOpenGnb ? styles.open_gnb : ''}`}
       >
         <div className={styles.inner_header}>
-          <MainNav openMenu={openMenu} setOpenMenu={setOpenMenu} />
+          <MainNav
+            openMenu={openMenu}
+            setOpenMenu={setOpenMenu}
+            onShow={showSearchHandler}
+          />
         </div>
       </header>
 
