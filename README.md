@@ -65,7 +65,8 @@ chore: ESLint 설정 파일 추가
 2. **ESG 보고서 페이지 (https://www.kakaocorp.com/page/responsible/esg)**
    <details>
       <summary>이미지 보기</summary>
-      ![ESG페이지](./images/esgPage.png)
+      
+   ![ESG페이지](./images/esgPage.png)
    </details>
 
 3. **보도자료 페이지 (https://www.kakaocorp.com/page/presskit/press-release)**
