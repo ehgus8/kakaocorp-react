@@ -10,6 +10,11 @@ const Slick = ({
   autoplay = true,
   arrows = true,
   fade = false,
+  dotsPosition = 'initial',
+  dotsBottom = '0',
+  dotsBg = '#000',
+  dotsOp = '.25',
+  onSlideChange = () => {},
 }) => {
   const settings = {
     dots: true,
@@ -21,15 +26,17 @@ const Slick = ({
     autoplaySpeed: 3000,
     arrows,
     fade,
+    afterChange: (current) => onSlideChange(current),
   };
 
   return (
     <div style={{ width: '100%', margin: '0 auto' }}>
       <style>{`
         .slick-dots {
-          position:initial;
+          position:${dotsPosition};
           height:16px;
           margin-top:16px;
+          bottom: ${dotsBottom};
 
           li{
             width:auto;
@@ -46,9 +53,10 @@ const Slick = ({
                 height:8px;
                 content:'';
                 display:block;
-                background:#000;
+                background:${dotsBg};
                 border-radius:4px;
                 position:initial;
+                opacity: ${dotsOp};
               }
             }
 
@@ -56,6 +64,7 @@ const Slick = ({
               button{
                 &::before{
                   width:24px;
+                  background:#000;
                 }
               }
             }
